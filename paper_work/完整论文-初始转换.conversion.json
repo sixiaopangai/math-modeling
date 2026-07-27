@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-27T15:43:23.697499+00:00",
+  "source_format": "latex",
+  "source": "/home/ubuntu/Desktop/math-modeling/完整论文-LaTeX/main.tex",
+  "source_files": [
+    "main.tex"
+  ],
+  "source_sha256": "78c2c87fa886d32082ce1b234c77f7a723f20c4dca2ecfd5ddd75934ea81db8d",
+  "project_files": [
+    "figures/process_q1_factor_screening.png",
+    "figures/process_q2_lag_search.png",
+    "figures/process_q3_rtd_selection.png",
+    "figures/process_q4_risk_matrix.png",
+    "figures/raw_q1_target_missing.png",
+    "figures/raw_q2_input_output_series.png",
+    "figures/raw_q3_filtered_treated_series.png",
+    "figures/raw_q4_daily_maximum.png",
+    "figures/result_q1_february_predictions.png",
+    "figures/result_q2_external_validation.png",
+    "figures/result_q3_horizon_accuracy.png",
+    "figures/result_q4_daily_grades.png",
+    "latex-project.json",
+    "main.tex",
+    "references.bib"
+  ],
+  "project_sha256": "a760654641485d0b4d807897994bec4e731e13546d2416a2a8438f93d151f724",
+  "output": "/home/ubuntu/Desktop/math-modeling/完整论文.docx",
+  "output_sha256": "eee6dc4b646cc9314a755b27682095de82a6e551ca8e1db9af31ed82a59ec91c",
+  "template": "/home/ubuntu/Desktop/math-modeling/.agents/skills/math-modeling/references/roles/论文手/references/论文模板.docx",
+  "template_sha256": "cdffc55765df1ae4e3dea6882b9088f4cc59c39f94e9808e7b83aa06fec29dd0",
+  "pandoc": {
+    "path": "/usr/bin/pandoc",
+    "version": "pandoc 3.1.3"
+  },
+  "command": [
+    "/usr/bin/pandoc",
+    "--from",
+    "latex",
+    "--to",
+    "docx",
+    "--standalone",
+    "--citeproc",
+    "/home/ubuntu/Desktop/math-modeling/tmpgvn082o2.tex",
+    "--output",
+    "/home/ubuntu/Desktop/math-modeling/tmptgd0ko8t.docx",
+    "--resource-path=/home/ubuntu/Desktop/math-modeling/完整论文-LaTeX",
+    "--reference-doc",
+    "/home/ubuntu/Desktop/math-modeling/.agents/skills/math-modeling/references/roles/论文手/references/论文模板.docx"
+  ],
+  "returncode": 0,
+  "duration_seconds": 0.317,
+  "warnings": [],
+  "allowed_warnings": [],
+  "warning_override": {
+    "patterns": [],
+    "reason": null
+  },
+  "reproduce": "/usr/bin/python /home/ubuntu/Desktop/math-modeling/.agents/skills/math-modeling/tools/docx/scripts/equations.py convert-latex /home/ubuntu/Desktop/math-modeling/完整论文-LaTeX/main.tex --output /home/ubuntu/Desktop/math-modeling/完整论文.docx --template /home/ubuntu/Desktop/math-modeling/.agents/skills/math-modeling/references/roles/论文手/references/论文模板.docx --timeout 180 --overwrite"
+}

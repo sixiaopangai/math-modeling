@@ -1,0 +1,505 @@
+{
+  "seed": 20260727,
+  "data": {
+    "rows": 5460,
+    "unique_timestamps": 5460,
+    "time_repairs": 5,
+    "input_hashes": [
+      {
+        "path": "data/附件/2025数据集/JBALB_Apr2025.xlsx",
+        "sha256": "13876fadd7fa1e6e6cd35a6e3a62d51e790dce7444325c8b8f302953181de0eb",
+        "semantic_sha256": "452565df477737bf83a1bbe43cfd081d7c52b975fc4accbd4f8b73f62b96a0bf",
+        "records": 360
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_Aug2025.xlsx",
+        "sha256": "64fedc29e944170124c9338e3182500b2560b6e1c4b16c82aace103fc0e87557",
+        "semantic_sha256": "4655358710e553a148b3577d12571ec9d711b29734c38b279179e0384e9eb60a",
+        "records": 372
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_Dec2025.xlsx",
+        "sha256": "b5895637a89652037edeaf8af6b99ad563b22165b3828f685824e98bdf9a22bb",
+        "semantic_sha256": "9b75abfac4f94e09367e2fb8a45edeaa720d01392aaa458f8ff5251622de9ab2",
+        "records": 372
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_Feb2025.xlsx",
+        "sha256": "658209e0339d29dbc954280350a8fc3eea21eb07e5254c46aef90d5ddd8cb328",
+        "semantic_sha256": "6a6f479c701dddd016b523ff9a3ae26270991fbf23b68c24782d64f264f1777c",
+        "records": 336
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_Jan2025.xlsx",
+        "sha256": "5b173ff25dc38eeb7322b8e1b98d93220b4770f326c687d67345335037d260d7",
+        "semantic_sha256": "9c2224363dbb926cb37a69dad151e5e0cc08ad0d24e4da142238ede088a1c336",
+        "records": 372
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_July2025.xlsx",
+        "sha256": "5b55c63754d2360253d55b4b51b1cdd06e7ca197d5e29ff2a9aa88b7b3dc6324",
+        "semantic_sha256": "d4b198c8a4b7043a73fa2fc0045cd4692abbcb224321dfb5ec9ad799121a202a",
+        "records": 372
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_Jun2025.xlsx",
+        "sha256": "0cb0c8e3ac4c172255e09b54f1748c74bb07d0367f08e916c73748798b0c7ff4",
+        "semantic_sha256": "54114e16d70a195835198e760f2a3e4529df27c2cf8f9a47499aa23bb3365ada",
+        "records": 360
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_Mar2025.xlsx",
+        "sha256": "2f055c1ec6a695b2977fec85af1ba177971bfd8237c234cb9894260b9c0ae03f",
+        "semantic_sha256": "d4129ab7dd85988adb4c3d011a3ff04647e34fcd49be276181e593cabb75d48f",
+        "records": 372
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_May2025.xlsx",
+        "sha256": "96676db99cd88d7ab825d4513c8c8f077856a35f7e939516aab2f5d5a8781b1c",
+        "semantic_sha256": "9da52c267c6e15173172970d25b7296ee570b2d5b5b4ee939f22ca77836806dc",
+        "records": 372
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_Nov2025.xlsx",
+        "sha256": "44dc5673d9575470a3582b879b7f0f11cbb965ca8a7a69fcadf6ed612c0589e1",
+        "semantic_sha256": "6bb956eed04a8b43bab69efd9f43d7daeae24f1ae3cf54cfe78589440367e158",
+        "records": 360
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_Oct2025.xlsx",
+        "sha256": "d6595437687d5a724076178889f00a614c47ce3a4871709de811ae3642ba6187",
+        "semantic_sha256": "84b7197c6ed1130d01e74236dd27fcc507ebd41e6dc1716c26b37428c2f0d056",
+        "records": 372
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_Sep2025.xlsx",
+        "sha256": "8b498db80b0f84258895bb6e2a2257303b0da480a113dc7b6593c78bea1846a4",
+        "semantic_sha256": "0b0444ba512077a0aa0bf8aa30c68d0f3c9ac650ccccbaae6b1f5e4ede72c673",
+        "records": 360
+      },
+      {
+        "path": "data/附件/2026数据集/2026年1月.xls",
+        "sha256": "b705b94d0f39e54bed9a4af0551902a628668978f98ec482baf6002ae662d215",
+        "semantic_sha256": "f3f9dd29b33ff8afeb00244bd6e8920d29bc106ba2535270d8d50f4cc0924010",
+        "records": 372
+      },
+      {
+        "path": "data/附件/2026数据集/2026年2月.xls",
+        "sha256": "b42fcceff9186eac3c6df08c7ef56076dfb198038da3bc9a5419e11f85593b7c",
+        "semantic_sha256": "21816d26048bf05d29eff05fd348f138126da22c1b7d3964316cca9b7be04a1a",
+        "records": 336
+      },
+      {
+        "path": "data/附件/2026数据集/2026年3月.xls",
+        "sha256": "908e8e2bdeec4f9cb5b2d7c793a859045bdf349b8146279d0eca0c2d9bb58ba7",
+        "semantic_sha256": "d803d40a7257b96b9326ee652bad87c5caf459b1f94f78f43e385e90a86883c2",
+        "records": 372
+      }
+    ]
+  },
+  "q1": {
+    "best_ridge": 100.0,
+    "best_rff": {
+      "gamma_factor": 1.0,
+      "ridge": 100.0,
+      "mean_rmse": 0.6838103739683182
+    },
+    "external_metrics": [
+      {
+        "model": "Huber-ridge",
+        "rmse": 0.39211151381905046,
+        "mae": 0.3450153894441122,
+        "r2": -3.447486871536632,
+        "split": "2026-03 external",
+        "meets_generalization_gate": false,
+        "interpretation": "fails external gate; do not claim generalization"
+      },
+      {
+        "model": "RFF-ridge",
+        "rmse": 0.371613688240261,
+        "mae": 0.31883686506648945,
+        "r2": -2.9946514401205464,
+        "split": "2026-03 external",
+        "meets_generalization_gate": false,
+        "interpretation": "fails external gate; do not claim generalization"
+      },
+      {
+        "model": "same-hour previous operational day",
+        "rmse": 0.1708727759344816,
+        "mae": 0.06525555555555557,
+        "r2": 0.1733588205205514,
+        "split": "2026-03 external",
+        "meets_generalization_gate": false,
+        "interpretation": "fails external gate; do not claim generalization"
+      }
+    ],
+    "top_factors": [
+      {
+        "factor": "filt_ntu",
+        "permutation_delta_rmse_ntu": 0.1153536451857731,
+        "q25_to_q75_effect_ntu": 0.05838093483983925,
+        "direction": "positive",
+        "spearman_rho": 0.2617203292970207,
+        "spearman_ci_low": 0.16799563662566416,
+        "spearman_ci_high": 0.3418939385184888,
+        "fold_effect_signs": "1,1,1,1",
+        "fold_spearman_signs": "1,1,1,1",
+        "fold_direction_agreement_count": 4,
+        "fold_direction_agreement_rate": 1.0,
+        "importance_split": "2026-01 posterior validation",
+        "importance_rank": 1,
+        "direction_consistent": true,
+        "selected_main_factor": true
+      },
+      {
+        "factor": "rw_clr",
+        "permutation_delta_rmse_ntu": 0.0240354100801905,
+        "q25_to_q75_effect_ntu": -0.0501148335042077,
+        "direction": "negative",
+        "spearman_rho": -0.11380237101794195,
+        "spearman_ci_low": -0.1958066737261787,
+        "spearman_ci_high": -0.02698109640738074,
+        "fold_effect_signs": "-1,-1,-1,-1",
+        "fold_spearman_signs": "-1,-1,-1,-1",
+        "fold_direction_agreement_count": 4,
+        "fold_direction_agreement_rate": 1.0,
+        "importance_split": "2026-01 posterior validation",
+        "importance_rank": 2,
+        "direction_consistent": true,
+        "selected_main_factor": true
+      },
+      {
+        "factor": "river_level",
+        "permutation_delta_rmse_ntu": 0.001644427895737266,
+        "q25_to_q75_effect_ntu": 0.02718441674927985,
+        "direction": "positive",
+        "spearman_rho": -0.07014201816686261,
+        "spearman_ci_low": -0.14459265834306684,
+        "spearman_ci_high": 0.03343697115314363,
+        "fold_effect_signs": "1,-1,-1,1",
+        "fold_spearman_signs": "-1,-1,-1,-1",
+        "fold_direction_agreement_count": 2,
+        "fold_direction_agreement_rate": 0.5,
+        "importance_split": "2026-01 posterior validation",
+        "importance_rank": 3,
+        "direction_consistent": false,
+        "selected_main_factor": false
+      },
+      {
+        "factor": "tw_flow",
+        "permutation_delta_rmse_ntu": 0.00017745052583095777,
+        "q25_to_q75_effect_ntu": 0.007399881041519396,
+        "direction": "positive",
+        "spearman_rho": 0.3828542649045769,
+        "spearman_ci_low": 0.3018052941222413,
+        "spearman_ci_high": 0.4658421681714246,
+        "fold_effect_signs": "-1,-1,-1,1",
+        "fold_spearman_signs": "1,1,1,1",
+        "fold_direction_agreement_count": 1,
+        "fold_direction_agreement_rate": 0.25,
+        "importance_split": "2026-01 posterior validation",
+        "importance_rank": 4,
+        "direction_consistent": false,
+        "selected_main_factor": false
+      },
+      {
+        "factor": "rw_flow",
+        "permutation_delta_rmse_ntu": 2.2757198914064025e-05,
+        "q25_to_q75_effect_ntu": -0.015737694991311002,
+        "direction": "negative",
+        "spearman_rho": 0.38373100848970865,
+        "spearman_ci_low": 0.3022848900056248,
+        "spearman_ci_high": 0.4606182936201727,
+        "fold_effect_signs": "-1,-1,-1,-1",
+        "fold_spearman_signs": "1,1,1,1",
+        "fold_direction_agreement_count": 0,
+        "fold_direction_agreement_rate": 0.0,
+        "importance_split": "2026-01 posterior validation",
+        "importance_rank": 5,
+        "direction_consistent": false,
+        "selected_main_factor": false
+      },
+      {
+        "factor": "treated_ph",
+        "permutation_delta_rmse_ntu": 0.0,
+        "q25_to_q75_effect_ntu": 0.0,
+        "direction": "flat",
+        "spearman_rho": 0.10670539641743233,
+        "spearman_ci_low": -0.04160069252415369,
+        "spearman_ci_high": 0.2529735319080957,
+        "fold_effect_signs": "0,0,0,0",
+        "fold_spearman_signs": "1,1,1,1",
+        "fold_direction_agreement_count": 0,
+        "fold_direction_agreement_rate": 0.0,
+        "importance_split": "2026-01 posterior validation",
+        "importance_rank": 6,
+        "direction_consistent": false,
+        "selected_main_factor": false
+      }
+    ],
+    "selected_main_factors": [
+      "filt_ntu",
+      "rw_clr"
+    ],
+    "function_relation": {
+      "formula": "NTU_hat=max(0, exp(beta0 + sum(beta_j*z_j))-1)",
+      "parameter_table": "results/q1_function_parameters.csv",
+      "partial_effect_table": "results/q1_partial_effects.csv",
+      "parameter_count_including_intercept": 60
+    }
+  },
+  "q2": {
+    "delays_steps": [
+      1,
+      0,
+      0,
+      3
+    ],
+    "ridge": 0.01,
+    "selected_ar_order": 6,
+    "external_metrics": [
+      {
+        "split": "rolling validation mean",
+        "rmse": 0.5290495027365016,
+        "mae": null,
+        "r2": null,
+        "ljung_box_q12": null,
+        "ljung_box_pvalue": null,
+        "max_abs_residual_acf_lag1_6": null,
+        "diagnostic_status": "not applicable"
+      },
+      {
+        "split": "2026-03 external",
+        "rmse": 0.16644979687151124,
+        "mae": 0.029398238506729537,
+        "r2": -0.3735899234081177,
+        "ljung_box_q12": 72.39386666983579,
+        "ljung_box_pvalue": 1.1390204138481003e-10,
+        "max_abs_residual_acf_lag1_6": 0.4164698262338233,
+        "diagnostic_status": "strong residual autocorrelation remains after AR-order test"
+      }
+    ]
+  },
+  "q3": {
+    "tau_hours": 8,
+    "kernel_mass": 0.9999999999999999,
+    "ridge_by_horizon": {
+      "1": 1.0,
+      "2": 1.0,
+      "3": 10.0,
+      "4": 10.0,
+      "5": 1.0,
+      "6": 1.0
+    },
+    "paths": 500,
+    "external_metrics": [
+      {
+        "horizon_hours": 2,
+        "model": "hybrid",
+        "rmse": 0.09703014244016234,
+        "mae": 0.0264352868812913,
+        "r2": 0.7279815218328324,
+        "coverage_95": 0.9757412398921833,
+        "n": 371,
+        "beats_persistence": false
+      },
+      {
+        "horizon_hours": 2,
+        "model": "persistence",
+        "rmse": 0.09223931723622444,
+        "mae": 0.02110512129380054,
+        "r2": 0.7541799922909821,
+        "coverage_95": null,
+        "n": 371,
+        "beats_persistence": null
+      },
+      {
+        "horizon_hours": 2,
+        "model": "physical",
+        "rmse": 0.5230075336781459,
+        "mae": 0.48583552152854126,
+        "r2": -6.903163345206492,
+        "coverage_95": null,
+        "n": 371,
+        "beats_persistence": null
+      },
+      {
+        "horizon_hours": 4,
+        "model": "hybrid",
+        "rmse": 0.13667921117881654,
+        "mae": 0.043560636013080495,
+        "r2": 0.4609991598165838,
+        "coverage_95": 0.9702702702702702,
+        "n": 370,
+        "beats_persistence": false
+      },
+      {
+        "horizon_hours": 4,
+        "model": "persistence",
+        "rmse": 0.13106324035736708,
+        "mae": 0.035594594594594596,
+        "r2": 0.5043828602992397,
+        "coverage_95": null,
+        "n": 370,
+        "beats_persistence": null
+      },
+      {
+        "horizon_hours": 4,
+        "model": "physical",
+        "rmse": 0.5309864668253621,
+        "mae": 0.49065250131037264,
+        "r2": -7.134885033732559,
+        "coverage_95": null,
+        "n": 370,
+        "beats_persistence": null
+      },
+      {
+        "horizon_hours": 6,
+        "model": "hybrid",
+        "rmse": 0.15091143627732231,
+        "mae": 0.05441524340373971,
+        "r2": 0.3439395489517997,
+        "coverage_95": 0.967479674796748,
+        "n": 369,
+        "beats_persistence": false
+      },
+      {
+        "horizon_hours": 6,
+        "model": "persistence",
+        "rmse": 0.13751690706599423,
+        "mae": 0.041577235772357723,
+        "r2": 0.45523180403253394,
+        "coverage_95": null,
+        "n": 369,
+        "beats_persistence": null
+      },
+      {
+        "horizon_hours": 6,
+        "model": "physical",
+        "rmse": 0.5343634251580867,
+        "mae": 0.4925489697717231,
+        "r2": -7.225702591935997,
+        "coverage_95": null,
+        "n": 369,
+        "beats_persistence": null
+      },
+      {
+        "horizon_hours": 8,
+        "model": "hybrid",
+        "rmse": 0.1420093825328564,
+        "mae": 0.05740003877727645,
+        "r2": 0.42017312075894253,
+        "coverage_95": 0.9782608695652174,
+        "n": 368,
+        "beats_persistence": false
+      },
+      {
+        "horizon_hours": 8,
+        "model": "persistence",
+        "rmse": 0.12523632008952204,
+        "mae": 0.04071195652173914,
+        "r2": 0.5490536646596089,
+        "coverage_95": null,
+        "n": 368,
+        "beats_persistence": null
+      },
+      {
+        "horizon_hours": 8,
+        "model": "physical",
+        "rmse": 0.5361908683018635,
+        "mae": 0.4935942981251765,
+        "r2": -7.266146401925427,
+        "coverage_95": null,
+        "n": 368,
+        "beats_persistence": null
+      },
+      {
+        "horizon_hours": 10,
+        "model": "hybrid",
+        "rmse": 0.1253698588451782,
+        "mae": 0.059691119179672014,
+        "r2": 0.5490286036836809,
+        "coverage_95": 0.9754768392370572,
+        "n": 367,
+        "beats_persistence": false
+      },
+      {
+        "horizon_hours": 10,
+        "model": "persistence",
+        "rmse": 0.12049197515309588,
+        "mae": 0.04191280653950954,
+        "r2": 0.5834386518687015,
+        "coverage_95": null,
+        "n": 367,
+        "beats_persistence": null
+      },
+      {
+        "horizon_hours": 10,
+        "model": "physical",
+        "rmse": 0.536550398994578,
+        "mae": 0.49408767272401416,
+        "r2": -7.260070753290062,
+        "coverage_95": null,
+        "n": 367,
+        "beats_persistence": null
+      },
+      {
+        "horizon_hours": 12,
+        "model": "hybrid",
+        "rmse": 0.13904176327325876,
+        "mae": 0.06769586781643333,
+        "r2": 0.44653314142937384,
+        "coverage_95": 0.9672131147540983,
+        "n": 366,
+        "beats_persistence": true
+      },
+      {
+        "horizon_hours": 12,
+        "model": "persistence",
+        "rmse": 0.1424686908371536,
+        "mae": 0.050278688524590165,
+        "r2": 0.41891461271638497,
+        "coverage_95": null,
+        "n": 366,
+        "beats_persistence": null
+      },
+      {
+        "horizon_hours": 12,
+        "model": "physical",
+        "rmse": 0.5370515302587866,
+        "mae": 0.49447533652434644,
+        "r2": -7.257203803841978,
+        "coverage_95": null,
+        "n": 366,
+        "beats_persistence": null
+      }
+    ]
+  },
+  "q4": {
+    "days": 90,
+    "grade_summary": [
+      {
+        "grade": "SAFE",
+        "days": 86,
+        "proportion": 0.9555555555555556
+      },
+      {
+        "grade": "LOW",
+        "days": 2,
+        "proportion": 0.022222222222222223
+      },
+      {
+        "grade": "MEDIUM",
+        "days": 1,
+        "proportion": 0.011111111111111112
+      },
+      {
+        "grade": "HIGH",
+        "days": 1,
+        "proportion": 0.011111111111111112
+      }
+    ],
+    "robustness_mean_unchanged": 0.991358024691358,
+    "robustness_min_unchanged": 0.9777777777777777
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "ok": true,
+  "checked": 20,
+  "writable": [],
+  "records": [
+    {
+      "path": "data/A题 自来水厂水质预测与评估.pdf",
+      "kind": "file",
+      "mode": "0444",
+      "writable_bits": "0000"
+    },
+    {
+      "path": "data/附件/2025数据集/JBALB_Apr2025.xlsx",
+      "kind": "file",
+      "mode": "0444",
+      "writable_bits": "0000"
+    },
+    {
+      "path": "data/附件/2025数据集/JBALB_Aug2025.xlsx",
+      "kind": "file",
+      "mode": "0444",
+      "writable_bits": "0000"
+    },
+    {
+      "path": "data/附件/2025数据集/JBALB_Dec2025.xlsx",
+      "kind": "file",
+      "mode": "0444",
+      "writable_bits": "0000"
+    },
+    {
+      "path": "data/附件/2025数据集/JBALB_Feb2025.xlsx",
+      "kind": "file",
+      "mode": "0444",
+      "writable_bits": "0000"
+    },
+    {
+      "path": "data/附件/2025数据集/JBALB_Jan2025.xlsx",
+      "kind": "file",
+      "mode": "0444",
+      "writable_bits": "0000"
+    },
+    {
+      "path": "data/附件/2025数据集/JBALB_July2025.xlsx",
+      "kind": "file",
+      "mode": "0444",
+      "writable_bits": "0000"
+    },
+    {
+      "path": "data/附件/2025数据集/JBALB_Jun2025.xlsx",
+      "kind": "file",
+      "mode": "0444",
+      "writable_bits": "0000"
+    },
+    {
+      "path": "data/附件/2025数据集/JBALB_Mar2025.xlsx",
+      "kind": "file",
+      "mode": "0444",
+      "writable_bits": "0000"
+    },
+    {
+      "path": "data/附件/2025数据集/JBALB_May2025.xlsx",
+      "kind": "file",
+      "mode": "0444",
+      "writable_bits": "0000"
+    },
+    {
+      "path": "data/附件/2025数据集/JBALB_Nov2025.xlsx",
+      "kind": "file",
+      "mode": "0444",
+      "writable_bits": "0000"
+    },
+    {
+      "path": "data/附件/2025数据集/JBALB_Oct2025.xlsx",
+      "kind": "file",
+      "mode": "0444",
+      "writable_bits": "0000"
+    },
+    {
+      "path": "data/附件/2025数据集/JBALB_Sep2025.xlsx",
+      "kind": "file",
+      "mode": "0444",
+      "writable_bits": "0000"
+    },
+    {
+      "path": "data/附件/2026数据集/2026年1月.xls",
+      "kind": "file",
+      "mode": "0444",
+      "writable_bits": "0000"
+    },
+    {
+      "path": "data/附件/2026数据集/2026年2月.xls",
+      "kind": "file",
+      "mode": "0444",
+      "writable_bits": "0000"
+    },
+    {
+      "path": "data/附件/2026数据集/2026年3月.xls",
+      "kind": "file",
+      "mode": "0444",
+      "writable_bits": "0000"
+    },
+    {
+      "path": "data",
+      "kind": "directory",
+      "mode": "0555",
+      "writable_bits": "0000"
+    },
+    {
+      "path": "data/附件",
+      "kind": "directory",
+      "mode": "0555",
+      "writable_bits": "0000"
+    },
+    {
+      "path": "data/附件/2025数据集",
+      "kind": "directory",
+      "mode": "0555",
+      "writable_bits": "0000"
+    },
+    {
+      "path": "data/附件/2026数据集",
+      "kind": "directory",
+      "mode": "0555",
+      "writable_bits": "0000"
+    }
+  ]
+}

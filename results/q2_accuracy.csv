@@ -1,0 +1,3 @@
+﻿split,rmse,mae,r2,ljung_box_q12,ljung_box_pvalue,max_abs_residual_acf_lag1_6,diagnostic_status
+rolling validation mean,0.5290495027,,,,,,not applicable
+2026-03 external,0.1664497969,0.02939823851,-0.3735899234,72.39386667,1.139020414e-10,0.4164698262,strong residual autocorrelation remains after AR-order test

@@ -1,0 +1,80 @@
+{
+  "ok": true,
+  "path": "results/建模结果.xlsx",
+  "sheet_count": 17,
+  "required_missing": [],
+  "empty_sheets": [],
+  "formula_count": 346,
+  "excel_errors": [],
+  "dimensions": {
+    "Q1预测": {
+      "rows": 37,
+      "columns": 7
+    },
+    "Q1模型评价": {
+      "rows": 4,
+      "columns": 7
+    },
+    "Q1因素筛选": {
+      "rows": 12,
+      "columns": 15
+    },
+    "Q1函数参数": {
+      "rows": 61,
+      "columns": 12
+    },
+    "Q1偏效应": {
+      "rows": 276,
+      "columns": 5
+    },
+    "Q2时滞与参数": {
+      "rows": 25,
+      "columns": 9
+    },
+    "Q2拟合精度": {
+      "rows": 3,
+      "columns": 8
+    },
+    "Q2_AR阶次敏感性": {
+      "rows": 21,
+      "columns": 3
+    },
+    "Q3预测": {
+      "rows": 58,
+      "columns": 12
+    },
+    "Q3分时距精度": {
+      "rows": 19,
+      "columns": 8
+    },
+    "Q3敏感性": {
+      "rows": 73,
+      "columns": 8
+    },
+    "Q4等级占比": {
+      "rows": 5,
+      "columns": 3
+    },
+    "Q4稳健性": {
+      "rows": 82,
+      "columns": 5
+    },
+    "Q4三月逐日": {
+      "rows": 32,
+      "columns": 16
+    },
+    "Q4全期逐日": {
+      "rows": 91,
+      "columns": 16
+    },
+    "数据质量": {
+      "rows": 18,
+      "columns": 9
+    },
+    "输入哈希": {
+      "rows": 16,
+      "columns": 4
+    }
+  },
+  "libreoffice_rendering": "see results/xlsx_recalc_external.json for the separate sandbox-external gate"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "total_errors": 0,
+  "total_formulas": 346,
+  "error_summary": {},
+  "path": "results/建模结果.xlsx",
+  "command": "/usr/bin/python /home/ubuntu/Desktop/math-modeling/.agents/skills/math-modeling/tools/xlsx/scripts/recalc.py /home/ubuntu/Desktop/math-modeling/results/建模结果.xlsx 60",
+  "unique_reproduction_command": "PYTHONPATH=.vendor python reproduce.py",
+  "workbook_sha256": "72145e9fe8f8582c9f964907e17e98eb60e3dba66a8c6646050c5fba4819f309",
+  "workbook_semantic_sha256": "6ba177df2f3c02ad0290a755943eb8b163eb716e34d8eaa0848858994086737e"
+}

@@ -1,0 +1,157 @@
+{
+  "ok": true,
+  "directory": "/home/ubuntu/Desktop/math-modeling/figures",
+  "questions": [
+    "q1",
+    "q2",
+    "q3",
+    "q4"
+  ],
+  "files": {
+    "process_q1_factor_screening.png": {
+      "width_px": 1050,
+      "height_px": 997,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 3.5000070000140004,
+      "height_in": 3.3233399800132934
+    },
+    "process_q1_factor_screening.svg": {
+      "text_count": 20,
+      "embedded_raster": false
+    },
+    "process_q2_lag_search.png": {
+      "width_px": 1050,
+      "height_px": 945,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 3.5000070000140004,
+      "height_in": 3.1500063000126004
+    },
+    "process_q2_lag_search.svg": {
+      "text_count": 27,
+      "embedded_raster": false
+    },
+    "process_q3_rtd_selection.png": {
+      "width_px": 1890,
+      "height_px": 907,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 6.300012600025201,
+      "height_in": 3.0233393800120933
+    },
+    "process_q3_rtd_selection.svg": {
+      "text_count": 31,
+      "embedded_raster": false
+    },
+    "process_q4_risk_matrix.png": {
+      "width_px": 1050,
+      "height_px": 966,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 3.5000070000140004,
+      "height_in": 3.22000644001288
+    },
+    "process_q4_risk_matrix.svg": {
+      "text_count": 23,
+      "embedded_raster": false
+    },
+    "raw_q1_target_missing.png": {
+      "width_px": 1890,
+      "height_px": 907,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 6.300012600025201,
+      "height_in": 3.0233393800120933
+    },
+    "raw_q1_target_missing.svg": {
+      "text_count": 19,
+      "embedded_raster": false
+    },
+    "raw_q2_input_output_series.png": {
+      "width_px": 1890,
+      "height_px": 907,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 6.300012600025201,
+      "height_in": 3.0233393800120933
+    },
+    "raw_q2_input_output_series.svg": {
+      "text_count": 13,
+      "embedded_raster": false
+    },
+    "raw_q3_filtered_treated_series.png": {
+      "width_px": 1890,
+      "height_px": 907,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 6.300012600025201,
+      "height_in": 3.0233393800120933
+    },
+    "raw_q3_filtered_treated_series.svg": {
+      "text_count": 16,
+      "embedded_raster": false
+    },
+    "raw_q4_daily_maximum.png": {
+      "width_px": 1890,
+      "height_px": 907,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 6.300012600025201,
+      "height_in": 3.0233393800120933
+    },
+    "raw_q4_daily_maximum.svg": {
+      "text_count": 18,
+      "embedded_raster": false
+    },
+    "result_q1_february_predictions.png": {
+      "width_px": 1890,
+      "height_px": 982,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 6.300012600025201,
+      "height_in": 3.2733398800130935
+    },
+    "result_q1_february_predictions.svg": {
+      "text_count": 26,
+      "embedded_raster": false
+    },
+    "result_q2_external_validation.png": {
+      "width_px": 1890,
+      "height_px": 907,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 6.300012600025201,
+      "height_in": 3.0233393800120933
+    },
+    "result_q2_external_validation.svg": {
+      "text_count": 16,
+      "embedded_raster": false
+    },
+    "result_q3_horizon_accuracy.png": {
+      "width_px": 1050,
+      "height_px": 945,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 3.5000070000140004,
+      "height_in": 3.1500063000126004
+    },
+    "result_q3_horizon_accuracy.svg": {
+      "text_count": 17,
+      "embedded_raster": false
+    },
+    "result_q4_daily_grades.png": {
+      "width_px": 1890,
+      "height_px": 869,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 6.300012600025201,
+      "height_in": 2.8966724600115867
+    },
+    "result_q4_daily_grades.svg": {
+      "text_count": 15,
+      "embedded_raster": false
+    }
+  },
+  "issues": []
+}

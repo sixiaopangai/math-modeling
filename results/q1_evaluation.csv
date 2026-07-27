@@ -1,0 +1,4 @@
+﻿model,rmse,mae,r2,split,meets_generalization_gate,interpretation
+Huber-ridge,0.3921115138,0.3450153894,-3.447486872,2026-03 external,False,fails external gate; do not claim generalization
+RFF-ridge,0.3716136882,0.3188368651,-2.99465144,2026-03 external,False,fails external gate; do not claim generalization
+same-hour previous operational day,0.1708727759,0.06525555556,0.1733588205,2026-03 external,False,fails external gate; do not claim generalization

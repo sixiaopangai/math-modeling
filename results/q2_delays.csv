@@ -1,0 +1,5 @@
+﻿variable,arx_lag_steps,crosscorr_peak_steps,crosscorr_peak_hours,crosscorr_at_peak,identifiable,arx_lag_hours,selected_ridge,selected_ar_order
+rw_ntu,1,0,0,0.02443186025,True,2,0.01,6
+rw_ph,0,1,2,0.01391557458,True,0,0.01,6
+alum,0,0,0,0.02919042742,True,0,0.01,6
+rw_flow,3,1,2,0.04075543077,True,6,0.01,6

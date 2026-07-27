@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "contest": "cumcm",
+  "main_tex": "main.tex",
+  "template": {
+    "path": "/home/ubuntu/Desktop/math-modeling/.agents/skills/math-modeling/tools/latex/assets/templates/cumcm",
+    "source": null,
+    "version": null,
+    "sha256": "beffdfb2062dbc72f3d6050691ec9a3816d8f91fd85840720ddd8ec757a3ae61"
+  },
+  "created_at": "2026-07-27T15:16:31.876130+00:00"
+}

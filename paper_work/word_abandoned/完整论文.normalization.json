@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "source_latex": "完整论文-LaTeX/main.tex",
+  "source_latex_sha256": "478ae46a736c21080be7714972a3c0eb12e90728c1da048844155ed5b6cbd4e4",
+  "pandoc_docx": "paper_work/完整论文-Pandoc源.docx",
+  "pandoc_docx_sha256": "e826fdfda35dbbcaef1493a8318fc0005a90d4145b824cbd10094ae3b2256454",
+  "pandoc_manifest": "paper_work/完整论文-Pandoc源.conversion.json",
+  "pandoc_manifest_sha256": "cb45a13ab501a22e78f7aab66cff70ed523f7dfc38319400725f614b87f45b1a",
+  "normalizer": "LibreOffice MS Word 2007 XML filter",
+  "normalized_docx": "完整论文.docx",
+  "normalized_docx_sha256": "ae03a004c465d1473222f4e8f1a619589e745b72400b1511db1046262cbfdba1",
+  "reason": "Pandoc output was normalized by LibreOffice so the final delivery passes strict OOXML validation; the original conversion artifact and manifest are retained for source binding."
+}

@@ -1,0 +1,196 @@
+{
+  "mode": "smoke",
+  "seed": 20260727,
+  "data": {
+    "rows": 5460,
+    "unique_timestamps": 5460,
+    "start": "2025-01-01T07:00:00",
+    "end": "2026-04-01T05:00:00",
+    "february_2026_rows": 336,
+    "february_2026_ntu_missing": 336,
+    "invalid_numeric_counts": {
+      "rw_pump_duty": 86,
+      "rw_flow": 1,
+      "cw_level": 1,
+      "tw_flow": 1
+    },
+    "time_repairs": [
+      {
+        "source": "JBALB_Sep2025.xlsx",
+        "op_day": "2025-09-30",
+        "raw": "5.87",
+        "corrected": "1700"
+      },
+      {
+        "source": "JBALB_Oct2025.xlsx",
+        "op_day": "2025-10-30",
+        "raw": "5.87",
+        "corrected": "1700"
+      },
+      {
+        "source": "JBALB_Oct2025.xlsx",
+        "op_day": "2025-10-31",
+        "raw": "5.87",
+        "corrected": "1700"
+      },
+      {
+        "source": "JBALB_Nov2025.xlsx",
+        "op_day": "2025-11-30",
+        "raw": "5.87",
+        "corrected": "1700"
+      },
+      {
+        "source": "JBALB_Dec2025.xlsx",
+        "op_day": "2025-12-30",
+        "raw": "5.87",
+        "corrected": "1700"
+      }
+    ],
+    "inputs": [
+      {
+        "path": "data/附件/2025数据集/JBALB_Apr2025.xlsx",
+        "sha256": "13876fadd7fa1e6e6cd35a6e3a62d51e790dce7444325c8b8f302953181de0eb",
+        "semantic_sha256": "452565df477737bf83a1bbe43cfd081d7c52b975fc4accbd4f8b73f62b96a0bf",
+        "records": 360
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_Aug2025.xlsx",
+        "sha256": "64fedc29e944170124c9338e3182500b2560b6e1c4b16c82aace103fc0e87557",
+        "semantic_sha256": "4655358710e553a148b3577d12571ec9d711b29734c38b279179e0384e9eb60a",
+        "records": 372
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_Dec2025.xlsx",
+        "sha256": "b5895637a89652037edeaf8af6b99ad563b22165b3828f685824e98bdf9a22bb",
+        "semantic_sha256": "9b75abfac4f94e09367e2fb8a45edeaa720d01392aaa458f8ff5251622de9ab2",
+        "records": 372
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_Feb2025.xlsx",
+        "sha256": "658209e0339d29dbc954280350a8fc3eea21eb07e5254c46aef90d5ddd8cb328",
+        "semantic_sha256": "6a6f479c701dddd016b523ff9a3ae26270991fbf23b68c24782d64f264f1777c",
+        "records": 336
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_Jan2025.xlsx",
+        "sha256": "5b173ff25dc38eeb7322b8e1b98d93220b4770f326c687d67345335037d260d7",
+        "semantic_sha256": "9c2224363dbb926cb37a69dad151e5e0cc08ad0d24e4da142238ede088a1c336",
+        "records": 372
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_July2025.xlsx",
+        "sha256": "5b55c63754d2360253d55b4b51b1cdd06e7ca197d5e29ff2a9aa88b7b3dc6324",
+        "semantic_sha256": "d4b198c8a4b7043a73fa2fc0045cd4692abbcb224321dfb5ec9ad799121a202a",
+        "records": 372
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_Jun2025.xlsx",
+        "sha256": "0cb0c8e3ac4c172255e09b54f1748c74bb07d0367f08e916c73748798b0c7ff4",
+        "semantic_sha256": "54114e16d70a195835198e760f2a3e4529df27c2cf8f9a47499aa23bb3365ada",
+        "records": 360
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_Mar2025.xlsx",
+        "sha256": "2f055c1ec6a695b2977fec85af1ba177971bfd8237c234cb9894260b9c0ae03f",
+        "semantic_sha256": "d4129ab7dd85988adb4c3d011a3ff04647e34fcd49be276181e593cabb75d48f",
+        "records": 372
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_May2025.xlsx",
+        "sha256": "96676db99cd88d7ab825d4513c8c8f077856a35f7e939516aab2f5d5a8781b1c",
+        "semantic_sha256": "9da52c267c6e15173172970d25b7296ee570b2d5b5b4ee939f22ca77836806dc",
+        "records": 372
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_Nov2025.xlsx",
+        "sha256": "44dc5673d9575470a3582b879b7f0f11cbb965ca8a7a69fcadf6ed612c0589e1",
+        "semantic_sha256": "6bb956eed04a8b43bab69efd9f43d7daeae24f1ae3cf54cfe78589440367e158",
+        "records": 360
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_Oct2025.xlsx",
+        "sha256": "d6595437687d5a724076178889f00a614c47ce3a4871709de811ae3642ba6187",
+        "semantic_sha256": "84b7197c6ed1130d01e74236dd27fcc507ebd41e6dc1716c26b37428c2f0d056",
+        "records": 372
+      },
+      {
+        "path": "data/附件/2025数据集/JBALB_Sep2025.xlsx",
+        "sha256": "8b498db80b0f84258895bb6e2a2257303b0da480a113dc7b6593c78bea1846a4",
+        "semantic_sha256": "0b0444ba512077a0aa0bf8aa30c68d0f3c9ac650ccccbaae6b1f5e4ede72c673",
+        "records": 360
+      },
+      {
+        "path": "data/附件/2026数据集/2026年1月.xls",
+        "sha256": "b705b94d0f39e54bed9a4af0551902a628668978f98ec482baf6002ae662d215",
+        "semantic_sha256": "f3f9dd29b33ff8afeb00244bd6e8920d29bc106ba2535270d8d50f4cc0924010",
+        "records": 372
+      },
+      {
+        "path": "data/附件/2026数据集/2026年2月.xls",
+        "sha256": "b42fcceff9186eac3c6df08c7ef56076dfb198038da3bc9a5419e11f85593b7c",
+        "semantic_sha256": "21816d26048bf05d29eff05fd348f138126da22c1b7d3964316cca9b7be04a1a",
+        "records": 336
+      },
+      {
+        "path": "data/附件/2026数据集/2026年3月.xls",
+        "sha256": "908e8e2bdeec4f9cb5b2d7c793a859045bdf349b8146279d0eca0c2d9bb58ba7",
+        "semantic_sha256": "d803d40a7257b96b9326ee652bad87c5caf459b1f94f78f43e385e90a86883c2",
+        "records": 372
+      }
+    ]
+  },
+  "q1": {
+    "train_rows": 4372,
+    "validation_rows": 372,
+    "feature_count": 59,
+    "ridge": 100.0,
+    "metrics_ntu": {
+      "rmse": 0.13701397872339563,
+      "mae": 0.10281317198403432,
+      "r2": 0.5621700885822218
+    },
+    "prediction_min": 0.15657701365763646,
+    "prediction_max": 1.4859764111329523
+  },
+  "q2": {
+    "delay_steps": {
+      "rw_ntu": 1,
+      "rw_ph": 1,
+      "alum": 3,
+      "rw_flow": 0
+    },
+    "delay_hours": {
+      "rw_ntu": 2,
+      "rw_ph": 2,
+      "alum": 6,
+      "rw_flow": 0
+    },
+    "ridge": 0.01,
+    "validation_metrics_ntu": {
+      "rmse": 0.22101653909937719,
+      "mae": 0.055233395091696454,
+      "r2": 0.4640524925755526
+    }
+  },
+  "q3": {
+    "tau_hours": 4,
+    "kernel_steps": 6,
+    "kernel_mass": 1.0,
+    "ridge": 10.0,
+    "validation_metrics_ntu": {
+      "rmse": 0.07524208264174884,
+      "mae": 0.02622640386416572,
+      "r2": 0.867962501376963
+    },
+    "prediction_min": 0.0816196633719311,
+    "prediction_max": 2.08118596258505
+  },
+  "q4_sample_2026_01_10": {
+    "grade": "HIGH",
+    "valid_points": 12,
+    "max_ntu": 2.15,
+    "max_excess_ntu": 1.15,
+    "longest_exceedance_hours": 8.0,
+    "exceedance_load_ntu_hours": 5.84
+  }
+}

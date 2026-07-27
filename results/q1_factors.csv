@@ -1,0 +1,12 @@
+﻿factor,permutation_delta_rmse_ntu,q25_to_q75_effect_ntu,direction,spearman_rho,spearman_ci_low,spearman_ci_high,fold_effect_signs,fold_spearman_signs,fold_direction_agreement_count,fold_direction_agreement_rate,importance_split,importance_rank,direction_consistent,selected_main_factor
+filt_ntu,0.1153536452,0.05838093484,positive,0.2617203293,0.1679956366,0.3418939385,"1,1,1,1","1,1,1,1",4,1,2026-01 posterior validation,1,True,True
+rw_clr,0.02403541008,-0.0501148335,negative,-0.113802371,-0.1958066737,-0.02698109641,"-1,-1,-1,-1","-1,-1,-1,-1",4,1,2026-01 posterior validation,2,True,True
+river_level,0.001644427896,0.02718441675,positive,-0.07014201817,-0.1445926583,0.03343697115,"1,-1,-1,1","-1,-1,-1,-1",2,0.5,2026-01 posterior validation,3,False,False
+tw_flow,0.0001774505258,0.007399881042,positive,0.3828542649,0.3018052941,0.4658421682,"-1,-1,-1,1","1,1,1,1",1,0.25,2026-01 posterior validation,4,False,False
+rw_flow,2.275719891e-05,-0.01573769499,negative,0.3837310085,0.30228489,0.4606182936,"-1,-1,-1,-1","1,1,1,1",0,0,2026-01 posterior validation,5,False,False
+treated_ph,0,0,flat,0.1067053964,-0.04160069252,0.2529735319,"0,0,0,0","1,1,1,1",0,0,2026-01 posterior validation,6,False,False
+rw_ph,0,0,flat,-0.2159922332,-0.3121114244,-0.09738930332,"0,0,0,0","-1,-1,-1,-1",0,0,2026-01 posterior validation,7,False,False
+alum,-0.0005806015477,0.03431451592,positive,-0.04656114182,-0.1681767021,0.05055234358,"1,1,1,1","1,-1,1,-1",2,0.5,2026-01 posterior validation,8,False,False
+cw_level,-0.0006827966512,0.005220383246,positive,0.04277641025,-0.02863634378,0.108401062,"-1,1,1,1","-1,-1,1,1",3,0.75,2026-01 posterior validation,9,True,False
+rw_ntu,-0.002406055381,0.03647054577,positive,-0.08820853216,-0.1777602614,-0.005241345162,"-1,-1,1,1","-1,-1,-1,-1",2,0.5,2026-01 posterior validation,10,False,False
+cl2,-0.002993395524,-0.02993719445,negative,-0.2686684864,-0.3512292491,-0.1631734257,"-1,-1,-1,-1","-1,-1,-1,-1",4,1,2026-01 posterior validation,11,True,False
