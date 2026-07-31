@@ -15,7 +15,8 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
-PROJECT_ROOT = Path(__file__).resolve().parent
+# 本文件位于 src/，仓库根目录在其上一级。
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
 VENDOR = PROJECT_ROOT / ".vendor"
 if VENDOR.is_dir():
     sys.path.insert(0, str(VENDOR))

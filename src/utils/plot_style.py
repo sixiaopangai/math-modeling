@@ -10,7 +10,8 @@ from typing import Iterable, Sequence
 import unicodedata
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+# 本文件位于 src/utils/，仓库根目录在其上两级。
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 SKILL_ROOT = (PROJECT_ROOT / ".agents" / "skills" / "math-modeling").resolve()
 
 # 以色觉可达性为先，颜色名称表达用途而不是绑定具体模型。

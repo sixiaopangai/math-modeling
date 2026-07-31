@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "created_at_utc": "2026-07-31T03:40:26.886846+00:00",
+  "created_at_utc": "2026-07-31T03:50:39.699484+00:00",
   "random_seed": 20260727,
   "input_files": [
     {
@@ -142,7 +142,7 @@
     "moving_block_origins": 12,
     "risk_limit_ntu": 1.0
   },
-  "reproduce_command": "PYTHONPATH=.vendor python reproduce.py",
+  "reproduce_command": "PYTHONPATH=.vendor python src/reproduce.py",
   "semantic_workbook_sha256": {
     "data/附件/2025数据集/JBALB_Apr2025.xlsx": "452565df477737bf83a1bbe43cfd081d7c52b975fc4accbd4f8b73f62b96a0bf",
     "data/附件/2025数据集/JBALB_Aug2025.xlsx": "4655358710e553a148b3577d12571ec9d711b29734c38b279179e0384e9eb60a",
@@ -172,29 +172,29 @@
   },
   "code_files": [
     {
-      "path": "water_quality_model.py",
-      "sha256": "d091dfc683fc6e568236fbcfb120fd34cdefb00ad32ab8c97cb9456cfad9bb10",
-      "bytes": 26074
+      "path": "src/water_quality_model.py",
+      "sha256": "384c6ebc0895ffa0471cd75577703bd9bc29c56583d35c60a31ba1f9a25709a2",
+      "bytes": 26138
     },
     {
-      "path": "water_quality_full.py",
+      "path": "src/water_quality_full.py",
       "sha256": "48b59f5bb969b63bb5608b50d7aca956842d67c45808f274a969d8bde926a575",
       "bytes": 65819
     },
     {
-      "path": "water_quality_figures.py",
+      "path": "src/water_quality_figures.py",
       "sha256": "b23e9e15fc56584c7f7876df9fa17fff5803e76fe3310c6d4ba77440284c9373",
       "bytes": 18041
     },
     {
-      "path": "reproduce.py",
-      "sha256": "2395bee26cab385c4e918424a7f639988d7b5304f2407454e7a95ae58990f75f",
-      "bytes": 11562
+      "path": "src/reproduce.py",
+      "sha256": "0994661c0d86164c0c76bc2d50d7572b576a614a227e9cc608be568dc66336a2",
+      "bytes": 11595
     },
     {
-      "path": "utils/plot_style.py",
-      "sha256": "d5724eb7b3c4c040cf09a8e0759784f1165ba1574c5b365caeb5c75445de1e42",
-      "bytes": 15128
+      "path": "src/utils/plot_style.py",
+      "sha256": "8da002e75ad0b5b09c26d1412e571f55d4f2358eb3aa78ade35ce392b511402b",
+      "bytes": 15194
     }
   ],
   "output_files": [
@@ -215,7 +215,7 @@
     },
     {
       "path": "figures/process_q1_factor_screening.svg",
-      "sha256": "94a22804917caa572d96739545b5147b5b960ba74486dc33af23b0a2992afb55",
+      "sha256": "fc2974d1984d32d0e7c4025e5f8c3f4e339d247091c775258e7571f5d0b53ec3",
       "bytes": 12283
     },
     {
@@ -225,7 +225,7 @@
     },
     {
       "path": "figures/process_q2_lag_search.svg",
-      "sha256": "88cfbe2bfd997de102ac0cb52f6777b0f735cc88d820e8f7384fb6ed1eb3d1d4",
+      "sha256": "e3b2e2ca0a72d50bbb2c1de5d029f886a77d0d442dbae311bd90a70c2ed90996",
       "bytes": 14101
     },
     {
@@ -235,7 +235,7 @@
     },
     {
       "path": "figures/process_q3_rtd_selection.svg",
-      "sha256": "0cdc867911c610b908cb0e99693d1f27b1d9f7cd886312d7dbc02d052b8fecfa",
+      "sha256": "c95a2d06d9b73b3675507cd82c67ca003ddbeaa1972c30071379a9ca22066587",
       "bytes": 20014
     },
     {
@@ -245,7 +245,7 @@
     },
     {
       "path": "figures/process_q4_risk_matrix.svg",
-      "sha256": "104711378241ba6c24dca4634b2b378b3d646322daa6830a497d810172d96c60",
+      "sha256": "2f1279713bd00c5706193cad4206b42f89c44048c82b03bb46b2d533d3cdfef8",
       "bytes": 29715
     },
     {
@@ -255,7 +255,7 @@
     },
     {
       "path": "figures/raw_q1_target_missing.svg",
-      "sha256": "b4343c0a213b7a4b1134c049ef6b4e8a249ae095b3bbe6cec87e15cd4f803a09",
+      "sha256": "2675b4a0de841d0cd976488501bc1639eced8f46ae5236b5c474c60d1e0ea356",
       "bytes": 29120
     },
     {
@@ -265,7 +265,7 @@
     },
     {
       "path": "figures/raw_q2_input_output_series.svg",
-      "sha256": "ba427c13c47625a977018f2cc7740d1dceb2e3baa285ae8e6b71f08ec07bac5f",
+      "sha256": "8ba772305d14cf6c167442416f7aed3853febe69ac453dedea1a10577920f807",
       "bytes": 52896
     },
     {
@@ -275,7 +275,7 @@
     },
     {
       "path": "figures/raw_q3_filtered_treated_series.svg",
-      "sha256": "7ed9339bada13d06d78ce0daff920e6077fd916ec17fcd1cee95ca8c27334947",
+      "sha256": "39d47371059170fcf3645b0f15ac034da5a8ba9d1fa5f08bd8847f517618a10d",
       "bytes": 21856
     },
     {
@@ -285,7 +285,7 @@
     },
     {
       "path": "figures/raw_q4_daily_maximum.svg",
-      "sha256": "099fc172ba34f465549ddb9945fd87b253d38e553ce6ebc90fc1c0b200bbb6e1",
+      "sha256": "4361efd1e506998bc50bab6326128e296e25bd77d72cd8d6fcdc83b69c889b9d",
       "bytes": 21873
     },
     {
@@ -295,7 +295,7 @@
     },
     {
       "path": "figures/result_q1_february_predictions.svg",
-      "sha256": "0a0cb24408b0ad87e083d0fd5439c1d0a23e79c67670501bcd7afc1026ca4b35",
+      "sha256": "0467e458555e044c6b88cf02cae46116769bae631f5a7b2bb0bd91e5d5d56ed9",
       "bytes": 17615
     },
     {
@@ -305,7 +305,7 @@
     },
     {
       "path": "figures/result_q2_external_validation.svg",
-      "sha256": "fe8c5a38c0fc93b6b9efa400dd604c83f9ba1b3c2b8e2b8741dbba247cdce7dd",
+      "sha256": "0705cce9f41ec711cb9c0172aa9aa6700810d1e49bd4f7bb79e26fe461b55c1a",
       "bytes": 21039
     },
     {
@@ -315,7 +315,7 @@
     },
     {
       "path": "figures/result_q3_horizon_accuracy.svg",
-      "sha256": "e9b522f8b436096f093686424e6b967ca9aaabf18eb5ed419551ed78710f424a",
+      "sha256": "5ffdf9935ce655240e960b9c2a415b2b0a3c18556076c3cd880728c6e9fb4780",
       "bytes": 13499
     },
     {
@@ -325,7 +325,7 @@
     },
     {
       "path": "figures/result_q4_daily_grades.svg",
-      "sha256": "0ba45f857a0a887c5050a640de5fc81bb43263cb4e6b585e90f3bc7fe2dd7158",
+      "sha256": "d8492c564ff6208e50842f7282b51cd111086b2cc6444f37db4dfd1c0a25ad0f",
       "bytes": 37932
     },
     {
@@ -455,8 +455,8 @@
     },
     {
       "path": "results/xlsx_recalc_external.json",
-      "sha256": "c47cbc78c4ef11e3486e40ba01b5faf71b14b80aec80b0ac2f1089d223bc76b7",
-      "bytes": 798
+      "sha256": "bf5a2b2868c6eddd54e40426e48823e1831e3f81ca20943a32c7ec25dedea352",
+      "bytes": 802
     },
     {
       "path": "results/xlsx_validation.json",
@@ -475,7 +475,7 @@
     },
     {
       "path": "results/建模结果.xlsx",
-      "sha256": "8dd063117e51f2190bd5b220fb54b5f389a18e7e9ed167d1c7f240b844987e69",
+      "sha256": "ef78f37a487ae3f6196e44c01dc76315db3c062575b442320dd6a7e429f727ae",
       "bytes": 69741
     },
     {

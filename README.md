@@ -22,13 +22,14 @@
 ├── data/                          只读输入，唯一权威数据源
 │   ├── A题 自来水厂水质预测与评估.pdf
 │   └── 附件/{2025数据集, 2026数据集}   12 个 .xlsx + 3 个 .xls
-├── water_quality_model.py         数据加载、时间轴重建、共用工具与哈希
-├── water_quality_full.py          四问建模主计算
-├── water_quality_figures.py       12 幅正式图 + 灰度审查图
-├── reproduce.py                   全量复现入口（唯一命令）
-├── diagnose_shift.py              事后诊断：分布漂移与指标口径
-├── diagnose_figure.py             事后诊断：诊断图与误差分解
-├── utils/plot_style.py            统一绘图样式（字体、配色、300 dpi）
+├── src/                           全部计算代码
+│   ├── water_quality_model.py     数据加载、时间轴重建、共用工具与哈希
+│   ├── water_quality_full.py      四问建模主计算
+│   ├── water_quality_figures.py   12 幅正式图 + 灰度审查图
+│   ├── reproduce.py               全量复现入口（唯一命令）
+│   ├── diagnose_shift.py          事后诊断：分布漂移与指标口径
+│   ├── diagnose_figure.py         事后诊断：诊断图与误差分解
+│   └── utils/plot_style.py        统一绘图样式（字体、配色、300 dpi）
 ├── .vendor/                       随仓库分发的 xlrd 2.0.2（读取 .xls）
 ├── results/                       全部数值产物（见下表）
 ├── figures/                       论文插图 PNG + SVG，_qa/ 为灰度审查版
@@ -69,13 +70,13 @@ python -m pip install "numpy==2.5.1" "pandas==3.0.5" "scipy==1.18.0" "matplotlib
 ## 一条命令完成全量复现
 
 ```bash
-PYTHONPATH=.vendor python reproduce.py
+PYTHONPATH=.vendor python src/reproduce.py
 ```
 
 Windows PowerShell 下等价写法：
 
 ```powershell
-$env:PYTHONPATH=".vendor"; python reproduce.py
+$env:PYTHONPATH=".vendor"; python srceproduce.py
 ```
 
 该命令依次执行：输入只读性校验 → 四问计算 → 绘图 → 图件审计（300 dpi、PNG/SVG 配对）→ 工作簿结构校验 → LibreOffice 重算 → 复算后二次校验 → 生成哈希清单。任一门禁不通过即抛出异常并停止。成功时输出 `{"status": "ok", ...}`。
@@ -93,8 +94,8 @@ Get-ChildItem data -Recurse -File | ForEach-Object { $_.IsReadOnly = $true }
 事后诊断不属于建模主链路，在主链路跑完之后单独复现：
 
 ```bash
-PYTHONPATH=.vendor python diagnose_shift.py
-PYTHONPATH=.vendor python diagnose_figure.py
+PYTHONPATH=.vendor python src/diagnose_shift.py
+PYTHONPATH=.vendor python src/diagnose_figure.py
 ```
 
 编译论文：
@@ -109,11 +110,11 @@ cd paper/完整论文-LaTeX && latexmk -norc -gg -xelatex -interaction=nonstopmo
 
 | 脚本 | 产物 |
 |---|---|
-| `water_quality_full.py --full` | `results/` 下全部 CSV/JSON/NPZ、`results/建模结果.xlsx` |
-| `water_quality_figures.py --all` | `figures/*.png`、`figures/*.svg`、`figures/_qa/*_grayscale.png`、`results/图表契约.json` |
-| `reproduce.py` | `results/input_protection.json`、`figure_audit.json`、`xlsx_validation.json`、`xlsx_recalc_external.json`、`复现清单.json` |
-| `diagnose_shift.py` | `results/分布漂移诊断.csv`、`results/指标口径诊断.json` |
-| `diagnose_figure.py` | `figures/diag_distribution_shift.png/.svg`、`results/误差分解诊断.json` |
+| `src/water_quality_full.py --full` | `results/` 下全部 CSV/JSON/NPZ、`results/建模结果.xlsx` |
+| `src/water_quality_figures.py --all` | `figures/*.png`、`figures/*.svg`、`figures/_qa/*_grayscale.png`、`results/图表契约.json` |
+| `src/reproduce.py` | `results/input_protection.json`、`figure_audit.json`、`xlsx_validation.json`、`xlsx_recalc_external.json`、`复现清单.json` |
+| `src/diagnose_shift.py` | `results/分布漂移诊断.csv`、`results/指标口径诊断.json` |
+| `src/diagnose_figure.py` | `figures/diag_distribution_shift.png/.svg`、`results/误差分解诊断.json` |
 
 主要结果文件：
 

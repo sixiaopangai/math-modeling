@@ -5,7 +5,7 @@
   "error_summary": {},
   "path": "results/建模结果.xlsx",
   "command": "C:\\Users\\lhy\\AppData\\Local\\Temp\\claude\\F--workspace-Java-Web-01-Learning-math-modeling\\3300304c-f1b2-42b6-bdd3-deab07ddcb2b\\scratchpad\\repro-venv\\Scripts\\python.exe F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\.agents\\skills\\math-modeling\\tools\\xlsx\\scripts\\recalc.py F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\results\\建模结果.xlsx 60",
-  "unique_reproduction_command": "PYTHONPATH=.vendor python reproduce.py",
-  "workbook_sha256": "8dd063117e51f2190bd5b220fb54b5f389a18e7e9ed167d1c7f240b844987e69",
+  "unique_reproduction_command": "PYTHONPATH=.vendor python src/reproduce.py",
+  "workbook_sha256": "ef78f37a487ae3f6196e44c01dc76315db3c062575b442320dd6a7e429f727ae",
   "workbook_semantic_sha256": "89013b48224d180920b583d802f574fa9be6720f165900cd4217160c7252a220"
 }

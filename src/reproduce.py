@@ -17,8 +17,9 @@ from water_quality_model import PROJECT_ROOT, SEED, semantic_workbook_hash, sha2
 
 RESULTS = PROJECT_ROOT / "results"
 FIGURES = PROJECT_ROOT / "figures"
+SOURCE = PROJECT_ROOT / "src"
 SKILL_ROOT = PROJECT_ROOT / ".agents" / "skills" / "math-modeling"
-REPRODUCE_COMMAND = "PYTHONPATH=.vendor python reproduce.py"
+REPRODUCE_COMMAND = "PYTHONPATH=.vendor python src/reproduce.py"
 EXCEL_ERRORS = ("#VALUE!", "#DIV/0!", "#REF!", "#NAME?", "#NULL!", "#NUM!", "#N/A")
 # Windows 上目录没有 POSIX 写位，只读属性也只对文件生效；输入保护因此只审计文件。
 WINDOWS = os.name == "nt"
@@ -235,11 +236,11 @@ def build_manifest() -> None:
     manifest_path = RESULTS / "复现清单.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     code_files = (
-        PROJECT_ROOT / "water_quality_model.py",
-        PROJECT_ROOT / "water_quality_full.py",
-        PROJECT_ROOT / "water_quality_figures.py",
-        PROJECT_ROOT / "reproduce.py",
-        PROJECT_ROOT / "utils" / "plot_style.py",
+        SOURCE / "water_quality_model.py",
+        SOURCE / "water_quality_full.py",
+        SOURCE / "water_quality_figures.py",
+        SOURCE / "reproduce.py",
+        SOURCE / "utils" / "plot_style.py",
     )
     output_files = sorted(
         path
@@ -273,8 +274,8 @@ def build_manifest() -> None:
 def main() -> int:
     RESULTS.mkdir(parents=True, exist_ok=True)
     validate_input_protection()
-    run([sys.executable, "water_quality_full.py", "--full"])
-    run([sys.executable, "water_quality_figures.py", "--all"])
+    run([sys.executable, str(SOURCE / "water_quality_full.py"), "--full"])
+    run([sys.executable, str(SOURCE / "water_quality_figures.py"), "--all"])
     run(
         [
             sys.executable,
