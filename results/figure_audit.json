@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "directory": "/home/ubuntu/Desktop/math-modeling/figures",
+  "directory": "F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\figures",
   "questions": [
     "q1",
     "q2",
@@ -8,6 +8,18 @@
     "q4"
   ],
   "files": {
+    "diag_distribution_shift.png": {
+      "width_px": 3450,
+      "height_px": 2400,
+      "dpi_x": 299.9994,
+      "dpi_y": 299.9994,
+      "width_in": 11.500023000046001,
+      "height_in": 8.000016000032
+    },
+    "diag_distribution_shift.svg": {
+      "text_count": 85,
+      "embedded_raster": false
+    },
     "process_q1_factor_screening.png": {
       "width_px": 1050,
       "height_px": 997,

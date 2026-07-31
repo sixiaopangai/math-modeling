@@ -1,6 +1,7 @@
 {
   "ok": true,
-  "checked": 20,
+  "checked": 16,
+  "directories_audited": false,
   "writable": [],
   "records": [
     {
@@ -97,30 +98,6 @@
       "path": "data/附件/2026数据集/2026年3月.xls",
       "kind": "file",
       "mode": "0444",
-      "writable_bits": "0000"
-    },
-    {
-      "path": "data",
-      "kind": "directory",
-      "mode": "0555",
-      "writable_bits": "0000"
-    },
-    {
-      "path": "data/附件",
-      "kind": "directory",
-      "mode": "0555",
-      "writable_bits": "0000"
-    },
-    {
-      "path": "data/附件/2025数据集",
-      "kind": "directory",
-      "mode": "0555",
-      "writable_bits": "0000"
-    },
-    {
-      "path": "data/附件/2026数据集",
-      "kind": "directory",
-      "mode": "0555",
       "writable_bits": "0000"
     }
   ]

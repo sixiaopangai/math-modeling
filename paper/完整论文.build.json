@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-31T03:37:25.966817+00:00",
+  "passed": true,
+  "main_tex": "main.tex",
+  "project_root": "F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\paper\\完整论文-LaTeX",
+  "source_sha256": "9a2e9f5e256afc6274ab0c10e10f0a4e6efa8e882fe33601eb705d3508932255",
+  "compiled_source_sha256": "9a2e9f5e256afc6274ab0c10e10f0a4e6efa8e882fe33601eb705d3508932255",
+  "post_build_source_sha256": "9a2e9f5e256afc6274ab0c10e10f0a4e6efa8e882fe33601eb705d3508932255",
+  "pdf_sha256": "c219a36c8dc8ff9c724a3c515376e31bfe1247051959300c30d88bae2202a051",
+  "project_manifest_sha256": "8ff60060584986e5724d985ecc2ad6a0c0d4300f30e3d17b403f8034ef484af2",
+  "engine": "xelatex",
+  "tools": {
+    "latexmk": {
+      "path": "C:\\Users\\lhy\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\latexmk.EXE",
+      "version": "Latexmk, John Collins, 9 March 2026. Version 4.88"
+    },
+    "xelatex": {
+      "path": "C:\\Users\\lhy\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.EXE",
+      "version": "MiKTeX-XeTeX 4.18 (MiKTeX 26.5)"
+    }
+  },
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\lhy\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\latexmk.EXE",
+        "-norc",
+        "-gg",
+        "-xelatex",
+        "-e",
+        "$xelatex = 'xelatex -no-shell-escape %O %S'",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-file-line-error",
+        "-outdir=build",
+        "main.tex"
+      ],
+      "cwd": "F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\paper\\完整论文-LaTeX",
+      "returncode": 0,
+      "duration_seconds": 14.094
+    }
+  ],
+  "warnings": [],
+  "allowed_warnings": [],
+  "warning_override": {
+    "patterns": [],
+    "reason": null
+  },
+  "issues": [],
+  "reproduce": "C:\\python\\python.exe F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\.agents\\skills\\math-modeling\\tools\\latex\\scripts\\latex_paper.py build F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\paper\\完整论文-LaTeX\\main.tex --engine xelatex --timeout 300 --publish F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\paper\\完整论文.pdf --overwrite"
+}

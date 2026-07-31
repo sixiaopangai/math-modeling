@@ -4,7 +4,7 @@
   "sheet_count": 17,
   "required_missing": [],
   "empty_sheets": [],
-  "formula_count": 346,
+  "formula_count": 354,
   "excel_errors": [],
   "dimensions": {
     "Q1预测": {
@@ -29,7 +29,7 @@
     },
     "Q2时滞与参数": {
       "rows": 25,
-      "columns": 9
+      "columns": 15
     },
     "Q2拟合精度": {
       "rows": 3,

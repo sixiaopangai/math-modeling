@@ -1,0 +1,40 @@
+# Python 字节码
+__pycache__/
+*.pyc
+*.pyo
+
+# 供应内依赖。注意：.vendor/xlrd 的源码文件已在版本库中被跟踪，
+# 本规则只阻止新增的字节码等衍生文件重新进入索引；
+# 已跟踪文件不受 .gitignore 影响，因此干净 clone 仍自带 xlrd，复现命令可直接运行。
+.vendor/
+
+# 论文中间产物：由 LaTeX 主稿转换或渲染得到，不作为交付物跟踪
+paper/paper_work/docx_render/
+paper/paper_work/pdf_render/
+paper/paper_work/word_abandoned/
+
+# LaTeX 编译输出
+paper/完整论文-LaTeX/build/
+paper/完整论文-LaTeX/build_baseline/
+paper/完整论文-LaTeX/build_merge/
+
+# 论文修改前备份
+backups/
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.toc
+*.xdv
+*.synctex.gz
+
+# 编辑备份
+*.bak
+
+# 操作系统与编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

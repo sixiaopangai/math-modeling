@@ -102,23 +102,23 @@
     "best_rff": {
       "gamma_factor": 1.0,
       "ridge": 100.0,
-      "mean_rmse": 0.6838103739683182
+      "mean_rmse": 0.6838103739683171
     },
     "external_metrics": [
       {
         "model": "Huber-ridge",
-        "rmse": 0.39211151381905046,
-        "mae": 0.3450153894441122,
-        "r2": -3.447486871536632,
+        "rmse": 0.3921115138190524,
+        "mae": 0.3450153894441143,
+        "r2": -3.4474868715366744,
         "split": "2026-03 external",
         "meets_generalization_gate": false,
         "interpretation": "fails external gate; do not claim generalization"
       },
       {
         "model": "RFF-ridge",
-        "rmse": 0.371613688240261,
-        "mae": 0.31883686506648945,
-        "r2": -2.9946514401205464,
+        "rmse": 0.37161368824026014,
+        "mae": 0.3188368650664888,
+        "r2": -2.994651440120529,
         "split": "2026-03 external",
         "meets_generalization_gate": false,
         "interpretation": "fails external gate; do not claim generalization"
@@ -136,8 +136,8 @@
     "top_factors": [
       {
         "factor": "filt_ntu",
-        "permutation_delta_rmse_ntu": 0.1153536451857731,
-        "q25_to_q75_effect_ntu": 0.05838093483983925,
+        "permutation_delta_rmse_ntu": 0.11535364518577326,
+        "q25_to_q75_effect_ntu": 0.05838093483983908,
         "direction": "positive",
         "spearman_rho": 0.2617203292970207,
         "spearman_ci_low": 0.16799563662566416,
@@ -153,8 +153,8 @@
       },
       {
         "factor": "rw_clr",
-        "permutation_delta_rmse_ntu": 0.0240354100801905,
-        "q25_to_q75_effect_ntu": -0.0501148335042077,
+        "permutation_delta_rmse_ntu": 0.02403541008019039,
+        "q25_to_q75_effect_ntu": -0.050114833504207645,
         "direction": "negative",
         "spearman_rho": -0.11380237101794195,
         "spearman_ci_low": -0.1958066737261787,
@@ -171,7 +171,7 @@
       {
         "factor": "river_level",
         "permutation_delta_rmse_ntu": 0.001644427895737266,
-        "q25_to_q75_effect_ntu": 0.02718441674927985,
+        "q25_to_q75_effect_ntu": 0.02718441674927996,
         "direction": "positive",
         "spearman_rho": -0.07014201816686261,
         "spearman_ci_low": -0.14459265834306684,
@@ -187,8 +187,8 @@
       },
       {
         "factor": "tw_flow",
-        "permutation_delta_rmse_ntu": 0.00017745052583095777,
-        "q25_to_q75_effect_ntu": 0.007399881041519396,
+        "permutation_delta_rmse_ntu": 0.00017745052583098553,
+        "q25_to_q75_effect_ntu": 0.0073998810415213945,
         "direction": "positive",
         "spearman_rho": 0.3828542649045769,
         "spearman_ci_low": 0.3018052941222413,
@@ -205,7 +205,7 @@
       {
         "factor": "rw_flow",
         "permutation_delta_rmse_ntu": 2.2757198914064025e-05,
-        "q25_to_q75_effect_ntu": -0.015737694991311002,
+        "q25_to_q75_effect_ntu": -0.01573769499131239,
         "direction": "negative",
         "spearman_rho": 0.38373100848970865,
         "spearman_ci_low": 0.3022848900056248,
@@ -260,7 +260,7 @@
     "external_metrics": [
       {
         "split": "rolling validation mean",
-        "rmse": 0.5290495027365016,
+        "rmse": 0.5290495027364858,
         "mae": null,
         "r2": null,
         "ljung_box_q12": null,
@@ -270,12 +270,12 @@
       },
       {
         "split": "2026-03 external",
-        "rmse": 0.16644979687151124,
-        "mae": 0.029398238506729537,
-        "r2": -0.3735899234081177,
-        "ljung_box_q12": 72.39386666983579,
-        "ljung_box_pvalue": 1.1390204138481003e-10,
-        "max_abs_residual_acf_lag1_6": 0.4164698262338233,
+        "rmse": 0.16644979687151087,
+        "mae": 0.029398238506727813,
+        "r2": -0.3735899234081117,
+        "ljung_box_q12": 72.39386666983572,
+        "ljung_box_pvalue": 1.1390204138481334e-10,
+        "max_abs_residual_acf_lag1_6": 0.41646982623382284,
         "diagnostic_status": "strong residual autocorrelation remains after AR-order test"
       }
     ]
@@ -296,9 +296,9 @@
       {
         "horizon_hours": 2,
         "model": "hybrid",
-        "rmse": 0.09703014244016234,
-        "mae": 0.0264352868812913,
-        "r2": 0.7279815218328324,
+        "rmse": 0.09703014244016524,
+        "mae": 0.02643528688129095,
+        "r2": 0.7279815218328161,
         "coverage_95": 0.9757412398921833,
         "n": 371,
         "beats_persistence": false
@@ -326,9 +326,9 @@
       {
         "horizon_hours": 4,
         "model": "hybrid",
-        "rmse": 0.13667921117881654,
-        "mae": 0.043560636013080495,
-        "r2": 0.4609991598165838,
+        "rmse": 0.136679211178809,
+        "mae": 0.043560636013079905,
+        "r2": 0.4609991598166433,
         "coverage_95": 0.9702702702702702,
         "n": 370,
         "beats_persistence": false
@@ -356,9 +356,9 @@
       {
         "horizon_hours": 6,
         "model": "hybrid",
-        "rmse": 0.15091143627732231,
-        "mae": 0.05441524340373971,
-        "r2": 0.3439395489517997,
+        "rmse": 0.15091143627732545,
+        "mae": 0.05441524340374478,
+        "r2": 0.34393954895177237,
         "coverage_95": 0.967479674796748,
         "n": 369,
         "beats_persistence": false
@@ -386,9 +386,9 @@
       {
         "horizon_hours": 8,
         "model": "hybrid",
-        "rmse": 0.1420093825328564,
-        "mae": 0.05740003877727645,
-        "r2": 0.42017312075894253,
+        "rmse": 0.14200938253285625,
+        "mae": 0.05740003877727582,
+        "r2": 0.42017312075894353,
         "coverage_95": 0.9782608695652174,
         "n": 368,
         "beats_persistence": false
@@ -416,9 +416,9 @@
       {
         "horizon_hours": 10,
         "model": "hybrid",
-        "rmse": 0.1253698588451782,
-        "mae": 0.059691119179672014,
-        "r2": 0.5490286036836809,
+        "rmse": 0.12536985884517896,
+        "mae": 0.05969111917967278,
+        "r2": 0.5490286036836756,
         "coverage_95": 0.9754768392370572,
         "n": 367,
         "beats_persistence": false
@@ -446,9 +446,9 @@
       {
         "horizon_hours": 12,
         "model": "hybrid",
-        "rmse": 0.13904176327325876,
-        "mae": 0.06769586781643333,
-        "r2": 0.44653314142937384,
+        "rmse": 0.1390417632732585,
+        "mae": 0.06769586781643111,
+        "r2": 0.4465331414293757,
         "coverage_95": 0.9672131147540983,
         "n": 366,
         "beats_persistence": true

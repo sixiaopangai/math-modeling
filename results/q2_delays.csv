@@ -1,5 +1,5 @@
-﻿variable,arx_lag_steps,crosscorr_peak_steps,crosscorr_peak_hours,crosscorr_at_peak,identifiable,arx_lag_hours,selected_ridge,selected_ar_order
-rw_ntu,1,0,0,0.02443186025,True,2,0.01,6
-rw_ph,0,1,2,0.01391557458,True,0,0.01,6
-alum,0,0,0,0.02919042742,True,0,0.01,6
-rw_flow,3,1,2,0.04075543077,True,6,0.01,6
+﻿variable,arx_lag_steps,crosscorr_peak_steps,crosscorr_peak_hours,crosscorr_at_peak,crosscorr_within_tolerance,train_valid_n,train_distinct_values,train_mode_share,train_robust_scale,degenerate_by_mode_rule,identifiable,arx_lag_hours,selected_ridge,selected_ar_order
+rw_ntu,1,0,0,0.02443186025,True,4748,239,0.03622577928,17.7912,False,True,2,0.01,6
+rw_ph,0,1,2,0.01391557458,True,3105,3,0.9388083736,0,True,False,0,0.01,6
+alum,0,0,0,0.02919042742,True,3104,5,0.5209407216,0,False,True,0,0.01,6
+rw_flow,3,1,2,0.04075543077,True,4740,172,0.02489451477,3.26172,False,True,6,0.01,6

@@ -226,7 +226,7 @@ def load_data(project_root: Path = PROJECT_ROOT) -> tuple[pd.DataFrame, list[dic
             records.append(row_record(row, mapping, op_day, path.name, TIME_SLOTS[index % 12]))
         inputs.append(
             {
-                "path": str(path.relative_to(project_root)),
+                "path": path.relative_to(project_root).as_posix(),
                 "sha256": sha256_file(path),
                 "semantic_sha256": semantic_workbook_hash(path),
                 "records": len(rows),
@@ -262,7 +262,7 @@ def load_data(project_root: Path = PROJECT_ROOT) -> tuple[pd.DataFrame, list[dic
             raise AssertionError(f"{path.name}: unexpected sheets/records")
         inputs.append(
             {
-                "path": str(path.relative_to(project_root)),
+                "path": path.relative_to(project_root).as_posix(),
                 "sha256": sha256_file(path),
                 "semantic_sha256": semantic_workbook_hash(path),
                 "records": file_records,

@@ -7,6 +7,7 @@ import json
 import os
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 from openpyxl import load_workbook
@@ -19,16 +20,25 @@ FIGURES = PROJECT_ROOT / "figures"
 SKILL_ROOT = PROJECT_ROOT / ".agents" / "skills" / "math-modeling"
 REPRODUCE_COMMAND = "PYTHONPATH=.vendor python reproduce.py"
 EXCEL_ERRORS = ("#VALUE!", "#DIV/0!", "#REF!", "#NAME?", "#NULL!", "#NUM!", "#N/A")
+# Windows 上目录没有 POSIX 写位，只读属性也只对文件生效；输入保护因此只审计文件。
+WINDOWS = os.name == "nt"
+
+
+def relative_path(path: Path) -> str:
+    """统一用正斜杠记录仓库内相对路径，使清单跨平台一致。"""
+    return path.relative_to(PROJECT_ROOT).as_posix()
 
 
 def command_environment() -> dict[str, str]:
     environment = os.environ.copy()
     environment["PYTHONPATH"] = ".vendor"
-    environment["MPLCONFIGDIR"] = "/tmp/mplconfig-water"
-    xdg_cache = Path("/tmp/math-modeling-xdg-cache")
-    xdg_config = Path("/tmp/math-modeling-xdg-config")
-    xdg_cache.mkdir(parents=True, exist_ok=True)
-    xdg_config.mkdir(parents=True, exist_ok=True)
+    scratch = Path(tempfile.gettempdir()) / "math-modeling-build"
+    mpl_config = scratch / "mplconfig"
+    xdg_cache = scratch / "xdg-cache"
+    xdg_config = scratch / "xdg-config"
+    for directory in (mpl_config, xdg_cache, xdg_config):
+        directory.mkdir(parents=True, exist_ok=True)
+    environment["MPLCONFIGDIR"] = str(mpl_config)
     environment["XDG_CACHE_HOME"] = str(xdg_cache)
     environment["XDG_CONFIG_HOME"] = str(xdg_config)
     return environment
@@ -49,19 +59,26 @@ def validate_input_protection() -> dict:
     data_root = PROJECT_ROOT / "data"
     inputs = sorted(path for path in data_root.rglob("*") if path.is_file())
     directories = [data_root] + sorted(path for path in data_root.rglob("*") if path.is_dir())
+    audited = inputs if WINDOWS else [*inputs, *directories]
     records = []
-    for path in [*inputs, *directories]:
+    for path in audited:
         mode = path.stat().st_mode & 0o777
         records.append(
             {
-                "path": str(path.relative_to(PROJECT_ROOT)),
+                "path": relative_path(path),
                 "kind": "directory" if path.is_dir() else "file",
                 "mode": f"{mode:04o}",
                 "writable_bits": f"{mode & 0o222:04o}",
             }
         )
     writable = [record for record in records if record["writable_bits"] != "0000"]
-    result = {"ok": not writable, "checked": len(records), "writable": writable, "records": records}
+    result = {
+        "ok": not writable,
+        "checked": len(records),
+        "directories_audited": not WINDOWS,
+        "writable": writable,
+        "records": records,
+    }
     (RESULTS / "input_protection.json").write_text(
         json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8"
     )
@@ -94,7 +111,7 @@ def recalculate_workbook(path: Path) -> dict:
         )
     result.update(
         {
-            "path": str(path.relative_to(PROJECT_ROOT)),
+            "path": relative_path(path),
             "command": " ".join(command),
             "unique_reproduction_command": REPRODUCE_COMMAND,
             "workbook_sha256": sha256_file(path),
@@ -141,7 +158,7 @@ def validate_workbook(path: Path) -> dict:
     empty = [sheet for sheet, size in dimensions.items() if size["rows"] < 2]
     result = {
         "ok": not missing and not empty and not errors,
-        "path": str(path.relative_to(PROJECT_ROOT)),
+        "path": relative_path(path),
         "sheet_count": len(dimensions),
         "required_missing": missing,
         "empty_sheets": empty,
@@ -231,12 +248,22 @@ def build_manifest() -> None:
         if path.is_file() and path != manifest_path and "_qa" not in path.parts
     )
     manifest["semantic_workbook_sha256"] = semantic_hashes
+    # 数据源唯一化的等价性判定：仓库曾并存两份 A 题附件，副本经语义哈希逐文件核对后删除。
+    # 副本删除后无法再重算，故把判定结果长期绑定在清单里。
+    equivalence_path = RESULTS / "数据源等价性判定.json"
+    if equivalence_path.exists():
+        equivalence = json.loads(equivalence_path.read_text(encoding="utf-8"))
+        manifest["data_source_deduplication"] = {
+            key: equivalence[key]
+            for key in ("判定时间", "结论", "判据", "文件对数", "语义一致数", "字节一致数", "说明")
+        }
+        manifest["data_source_deduplication"]["明细"] = relative_path(equivalence_path)
     manifest["code_files"] = [
-        {"path": str(path.relative_to(PROJECT_ROOT)), "sha256": sha256_file(path), "bytes": path.stat().st_size}
+        {"path": relative_path(path), "sha256": sha256_file(path), "bytes": path.stat().st_size}
         for path in code_files
     ]
     manifest["output_files"] = [
-        {"path": str(path.relative_to(PROJECT_ROOT)), "sha256": sha256_file(path), "bytes": path.stat().st_size}
+        {"path": relative_path(path), "sha256": sha256_file(path), "bytes": path.stat().st_size}
         for path in output_files
     ]
     manifest["output_workbook_semantic_sha256"] = semantic_workbook_hash(RESULTS / "建模结果.xlsx")

@@ -34,6 +34,13 @@ from water_quality_model import (
 
 
 GRADE_ORDER = ("SAFE", "LOW", "MEDIUM", "HIGH")
+# 题目分析报告 §5.2 预先登记的退化判据。窗口取红线固定的训练/开发窗（2025-01 至 2026-01），
+# 与 diagnose_shift.py 的 TRAIN_END 一致。判据以众数占比实现「90% 以上取值相同」，并把
+# 「稳健尺度为 0」取其本意——变量退化为常数；不采用字面 1.4826*MAD==0，因为近离散变量
+# 只要中位数取值过半 MAD 即归零，会把 0.05/0.06 近乎均分的混凝剂误判为退化。
+# 两个统计量都写入结果表供核验。
+IDENTIFIABILITY_WINDOW_END = pd.Timestamp("2026-02-01")
+MODE_SHARE_LIMIT = 0.90
 ROLLING_FOLDS = (
     (pd.Timestamp("2025-09-01"), pd.Timestamp("2025-10-01")),
     (pd.Timestamp("2025-10-01"), pd.Timestamp("2025-11-01")),
@@ -475,6 +482,28 @@ def q2_design_order(
     return pd.DataFrame(data), target
 
 
+def degeneracy_stats(frame: pd.DataFrame, variable: str) -> dict[str, Any]:
+    """题目分析报告 §5.2 的退化统计，只在训练/开发窗上计算。"""
+    values = frame.loc[frame["timestamp"] < IDENTIFIABILITY_WINDOW_END, variable].dropna()
+    if values.empty:
+        return {
+            "train_valid_n": 0,
+            "train_distinct_values": 0,
+            "train_mode_share": float("nan"),
+            "train_robust_scale": float("nan"),
+            "degenerate": True,
+        }
+    counts = values.value_counts()
+    median = float(np.median(values))
+    return {
+        "train_valid_n": int(values.size),
+        "train_distinct_values": int(values.nunique()),
+        "train_mode_share": float(counts.iloc[0] / values.size),
+        "train_robust_scale": float(1.4826 * np.median(np.abs(values - median))),
+        "degenerate": bool(counts.iloc[0] / values.size >= MODE_SHARE_LIMIT or values.nunique() == 1),
+    }
+
+
 def run_q2(frame: pd.DataFrame) -> dict[str, Any]:
     search_rows = []
     best: tuple[float, tuple[int, int, int, int], float] | None = None
@@ -561,14 +590,24 @@ def run_q2(frame: pd.DataFrame) -> dict[str, Any]:
             pair = pd.concat((source_diff.shift(lag), target_diff), axis=1).dropna()
             correlations.append(float(pair.corr().iloc[0, 1]))
         peak = int(np.nanargmax(np.abs(correlations)))
+        position = ("rw_ntu", "rw_ph", "alum", "rw_flow").index(variable)
+        # §5.3 的 ±4 h 互相关容差与 §5.2 的退化判据必须同时通过才算可辨识。
+        within_tolerance = bool(abs(peak - delays[position]) <= 2)
+        degeneracy = degeneracy_stats(frame, variable)
         cross_rows.append(
             {
                 "variable": variable,
-                "arx_lag_steps": delays[("rw_ntu", "rw_ph", "alum", "rw_flow").index(variable)],
+                "arx_lag_steps": delays[position],
                 "crosscorr_peak_steps": peak,
                 "crosscorr_peak_hours": peak * STEP_HOURS,
                 "crosscorr_at_peak": correlations[peak],
-                "identifiable": abs(peak - delays[("rw_ntu", "rw_ph", "alum", "rw_flow").index(variable)]) <= 2,
+                "crosscorr_within_tolerance": within_tolerance,
+                "train_valid_n": degeneracy["train_valid_n"],
+                "train_distinct_values": degeneracy["train_distinct_values"],
+                "train_mode_share": degeneracy["train_mode_share"],
+                "train_robust_scale": degeneracy["train_robust_scale"],
+                "degenerate_by_mode_rule": degeneracy["degenerate"],
+                "identifiable": bool(within_tolerance and not degeneracy["degenerate"]),
             }
         )
 
