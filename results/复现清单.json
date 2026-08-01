@@ -1,85 +1,85 @@
 {
   "schema_version": 1,
-  "created_at_utc": "2026-07-31T03:50:39.699484+00:00",
+  "created_at_utc": "2026-08-01T18:21:04.208774+00:00",
   "random_seed": 20260727,
   "input_files": [
     {
-      "path": "F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\data\\A题 自来水厂水质预测与评估.pdf",
+      "path": "data/A题 自来水厂水质预测与评估.pdf",
       "sha256": "8bf6d8df428611d9bd8ef896c19cc68d35ce767460bc1abf732dc204cfeda2f4",
       "bytes": 286213
     },
     {
-      "path": "F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\data\\附件\\2025数据集\\JBALB_Apr2025.xlsx",
+      "path": "data/附件/2025数据集/JBALB_Apr2025.xlsx",
       "sha256": "13876fadd7fa1e6e6cd35a6e3a62d51e790dce7444325c8b8f302953181de0eb",
       "bytes": 42901
     },
     {
-      "path": "F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\data\\附件\\2025数据集\\JBALB_Aug2025.xlsx",
+      "path": "data/附件/2025数据集/JBALB_Aug2025.xlsx",
       "sha256": "64fedc29e944170124c9338e3182500b2560b6e1c4b16c82aace103fc0e87557",
       "bytes": 31484
     },
     {
-      "path": "F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\data\\附件\\2025数据集\\JBALB_Dec2025.xlsx",
+      "path": "data/附件/2025数据集/JBALB_Dec2025.xlsx",
       "sha256": "b5895637a89652037edeaf8af6b99ad563b22165b3828f685824e98bdf9a22bb",
       "bytes": 42207
     },
     {
-      "path": "F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\data\\附件\\2025数据集\\JBALB_Feb2025.xlsx",
+      "path": "data/附件/2025数据集/JBALB_Feb2025.xlsx",
       "sha256": "658209e0339d29dbc954280350a8fc3eea21eb07e5254c46aef90d5ddd8cb328",
       "bytes": 43272
     },
     {
-      "path": "F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\data\\附件\\2025数据集\\JBALB_Jan2025.xlsx",
+      "path": "data/附件/2025数据集/JBALB_Jan2025.xlsx",
       "sha256": "5b173ff25dc38eeb7322b8e1b98d93220b4770f326c687d67345335037d260d7",
       "bytes": 44600
     },
     {
-      "path": "F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\data\\附件\\2025数据集\\JBALB_July2025.xlsx",
+      "path": "data/附件/2025数据集/JBALB_July2025.xlsx",
       "sha256": "5b55c63754d2360253d55b4b51b1cdd06e7ca197d5e29ff2a9aa88b7b3dc6324",
       "bytes": 30948
     },
     {
-      "path": "F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\data\\附件\\2025数据集\\JBALB_Jun2025.xlsx",
+      "path": "data/附件/2025数据集/JBALB_Jun2025.xlsx",
       "sha256": "0cb0c8e3ac4c172255e09b54f1748c74bb07d0367f08e916c73748798b0c7ff4",
       "bytes": 31285
     },
     {
-      "path": "F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\data\\附件\\2025数据集\\JBALB_Mar2025.xlsx",
+      "path": "data/附件/2025数据集/JBALB_Mar2025.xlsx",
       "sha256": "2f055c1ec6a695b2977fec85af1ba177971bfd8237c234cb9894260b9c0ae03f",
       "bytes": 44246
     },
     {
-      "path": "F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\data\\附件\\2025数据集\\JBALB_May2025.xlsx",
+      "path": "data/附件/2025数据集/JBALB_May2025.xlsx",
       "sha256": "96676db99cd88d7ab825d4513c8c8f077856a35f7e939516aab2f5d5a8781b1c",
       "bytes": 31379
     },
     {
-      "path": "F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\data\\附件\\2025数据集\\JBALB_Nov2025.xlsx",
+      "path": "data/附件/2025数据集/JBALB_Nov2025.xlsx",
       "sha256": "44dc5673d9575470a3582b879b7f0f11cbb965ca8a7a69fcadf6ed612c0589e1",
       "bytes": 45682
     },
     {
-      "path": "F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\data\\附件\\2025数据集\\JBALB_Oct2025.xlsx",
+      "path": "data/附件/2025数据集/JBALB_Oct2025.xlsx",
       "sha256": "d6595437687d5a724076178889f00a614c47ce3a4871709de811ae3642ba6187",
       "bytes": 44977
     },
     {
-      "path": "F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\data\\附件\\2025数据集\\JBALB_Sep2025.xlsx",
+      "path": "data/附件/2025数据集/JBALB_Sep2025.xlsx",
       "sha256": "8b498db80b0f84258895bb6e2a2257303b0da480a113dc7b6593c78bea1846a4",
       "bytes": 43301
     },
     {
-      "path": "F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\data\\附件\\2026数据集\\2026年1月.xls",
+      "path": "data/附件/2026数据集/2026年1月.xls",
       "sha256": "b705b94d0f39e54bed9a4af0551902a628668978f98ec482baf6002ae662d215",
       "bytes": 112128
     },
     {
-      "path": "F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\data\\附件\\2026数据集\\2026年2月.xls",
+      "path": "data/附件/2026数据集/2026年2月.xls",
       "sha256": "b42fcceff9186eac3c6df08c7ef56076dfb198038da3bc9a5419e11f85593b7c",
       "bytes": 110080
     },
     {
-      "path": "F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\data\\附件\\2026数据集\\2026年3月.xls",
+      "path": "data/附件/2026数据集/2026年3月.xls",
       "sha256": "908e8e2bdeec4f9cb5b2d7c793a859045bdf349b8146279d0eca0c2d9bb58ba7",
       "bytes": 115712
     }
@@ -188,8 +188,8 @@
     },
     {
       "path": "src/reproduce.py",
-      "sha256": "0994661c0d86164c0c76bc2d50d7572b576a614a227e9cc608be568dc66336a2",
-      "bytes": 11595
+      "sha256": "112ccfb4416e5c4505a5468c9893349d8709f8f7cf96bd3d818c8b163a7baa41",
+      "bytes": 12911
     },
     {
       "path": "src/utils/plot_style.py",
@@ -205,7 +205,7 @@
     },
     {
       "path": "figures/diag_distribution_shift.svg",
-      "sha256": "3c69a03f4d660676be74a87243d7754ba1909a34cb112fefe47890a226c9c524",
+      "sha256": "d3e4badbe262e947784a7545c13faa0458991932f23396d0392e786436c9c57f",
       "bytes": 116094
     },
     {
@@ -215,7 +215,7 @@
     },
     {
       "path": "figures/process_q1_factor_screening.svg",
-      "sha256": "fc2974d1984d32d0e7c4025e5f8c3f4e339d247091c775258e7571f5d0b53ec3",
+      "sha256": "99789597cb8272f65ad396b7a9bc5faca319302d9b052ac5634b238b4e61ac71",
       "bytes": 12283
     },
     {
@@ -225,7 +225,7 @@
     },
     {
       "path": "figures/process_q2_lag_search.svg",
-      "sha256": "e3b2e2ca0a72d50bbb2c1de5d029f886a77d0d442dbae311bd90a70c2ed90996",
+      "sha256": "e1af3db1d047166da45ccc7a14619534f0bd65c46a693c93a49f680b098eebe4",
       "bytes": 14101
     },
     {
@@ -235,7 +235,7 @@
     },
     {
       "path": "figures/process_q3_rtd_selection.svg",
-      "sha256": "c95a2d06d9b73b3675507cd82c67ca003ddbeaa1972c30071379a9ca22066587",
+      "sha256": "18e7b9187c0f78e29a350f047d09c3aaf8503b42a0f8206592941e42760b47ff",
       "bytes": 20014
     },
     {
@@ -245,7 +245,7 @@
     },
     {
       "path": "figures/process_q4_risk_matrix.svg",
-      "sha256": "2f1279713bd00c5706193cad4206b42f89c44048c82b03bb46b2d533d3cdfef8",
+      "sha256": "a35dd38fe0e73342414171b900680fae356763bd3edf1934508b24d1b3193b5c",
       "bytes": 29715
     },
     {
@@ -255,7 +255,7 @@
     },
     {
       "path": "figures/raw_q1_target_missing.svg",
-      "sha256": "2675b4a0de841d0cd976488501bc1639eced8f46ae5236b5c474c60d1e0ea356",
+      "sha256": "1fe468a297f3014a22075e6d299ab90db2f37ef5fb5f31dc0ae65a40cd748bd1",
       "bytes": 29120
     },
     {
@@ -265,7 +265,7 @@
     },
     {
       "path": "figures/raw_q2_input_output_series.svg",
-      "sha256": "8ba772305d14cf6c167442416f7aed3853febe69ac453dedea1a10577920f807",
+      "sha256": "c5fe25dbc21bb402a11366415966f8b39feaa3c9f8ac72c92eb2b2c47eaef398",
       "bytes": 52896
     },
     {
@@ -275,7 +275,7 @@
     },
     {
       "path": "figures/raw_q3_filtered_treated_series.svg",
-      "sha256": "39d47371059170fcf3645b0f15ac034da5a8ba9d1fa5f08bd8847f517618a10d",
+      "sha256": "d0b0ee6136162d346db3a40f76df254aca5fa68b2ca975cff29e8808e4b4878b",
       "bytes": 21856
     },
     {
@@ -285,7 +285,7 @@
     },
     {
       "path": "figures/raw_q4_daily_maximum.svg",
-      "sha256": "4361efd1e506998bc50bab6326128e296e25bd77d72cd8d6fcdc83b69c889b9d",
+      "sha256": "de1ea8830d896ab03f00d428ecf150fc1d39524e0c7f0d124bc711f4f0e1ea67",
       "bytes": 21873
     },
     {
@@ -295,7 +295,7 @@
     },
     {
       "path": "figures/result_q1_february_predictions.svg",
-      "sha256": "0467e458555e044c6b88cf02cae46116769bae631f5a7b2bb0bd91e5d5d56ed9",
+      "sha256": "5c84be5f619434bf5aca21198e9b9e5703fcc810d653365311f4e8467777ae3f",
       "bytes": 17615
     },
     {
@@ -305,7 +305,7 @@
     },
     {
       "path": "figures/result_q2_external_validation.svg",
-      "sha256": "0705cce9f41ec711cb9c0172aa9aa6700810d1e49bd4f7bb79e26fe461b55c1a",
+      "sha256": "61ccf42256aa7d97c25dc5390ae7117fc73fb549b2c0dbff753c678e3ce8e5be",
       "bytes": 21039
     },
     {
@@ -315,7 +315,7 @@
     },
     {
       "path": "figures/result_q3_horizon_accuracy.svg",
-      "sha256": "5ffdf9935ce655240e960b9c2a415b2b0a3c18556076c3cd880728c6e9fb4780",
+      "sha256": "688a206743a4d09f6794118e2d7874e8350e1b05af1fd42752e6ae0f85317bdd",
       "bytes": 13499
     },
     {
@@ -325,7 +325,7 @@
     },
     {
       "path": "figures/result_q4_daily_grades.svg",
-      "sha256": "d8492c564ff6208e50842f7282b51cd111086b2cc6444f37db4dfd1c0a25ad0f",
+      "sha256": "c43f35fde01c04bdea11be2596ca6c3b932db010a57737f113a3b1250d05f76a",
       "bytes": 37932
     },
     {
@@ -335,8 +335,8 @@
     },
     {
       "path": "results/figure_audit.json",
-      "sha256": "4fe37eeca9a13a54808d503ee11455c7080ad76d31a70ffac6667163008c7109",
-      "bytes": 4511
+      "sha256": "d2bd599d87260bb42c00c23cf126b3a682e263d90384dbc2a5d5c7b9c37c7a6e",
+      "bytes": 4456
     },
     {
       "path": "results/full_summary.json",
@@ -455,8 +455,8 @@
     },
     {
       "path": "results/xlsx_recalc_external.json",
-      "sha256": "bf5a2b2868c6eddd54e40426e48823e1831e3f81ca20943a32c7ec25dedea352",
-      "bytes": 802
+      "sha256": "ec921ff86d1bb3b1560744265e6b06accd176e93a23713f42b73a0102e4794f2",
+      "bytes": 519
     },
     {
       "path": "results/xlsx_validation.json",
@@ -475,8 +475,8 @@
     },
     {
       "path": "results/建模结果.xlsx",
-      "sha256": "ef78f37a487ae3f6196e44c01dc76315db3c062575b442320dd6a7e429f727ae",
-      "bytes": 69741
+      "sha256": "a631f4a25605e4270d6bed5722e39f618826821d4ad0c8087c661e516648c12b",
+      "bytes": 69740
     },
     {
       "path": "results/指标口径诊断.json",

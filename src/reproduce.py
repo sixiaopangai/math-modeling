@@ -30,6 +30,21 @@ def relative_path(path: Path) -> str:
     return path.relative_to(PROJECT_ROOT).as_posix()
 
 
+def portable_path(value: str) -> str:
+    """把记录用的绝对路径压成仓库相对形式。
+
+    产物 JSON 会随论文一并提交，竞赛规则要求材料中不得出现参赛者身份信息，
+    而绝对路径会带出用户名与本机目录结构；解释器路径统一记为 python。
+    """
+    text = str(value).replace("\\", "/")
+    root = PROJECT_ROOT.as_posix()
+    if text.startswith(root):
+        return text[len(root):].lstrip("/") or "."
+    if text.endswith("python.exe") or text.endswith("/python") or text.endswith("python3"):
+        return "python"
+    return text
+
+
 def command_environment() -> dict[str, str]:
     environment = os.environ.copy()
     environment["PYTHONPATH"] = ".vendor"
@@ -113,7 +128,7 @@ def recalculate_workbook(path: Path) -> dict:
     result.update(
         {
             "path": relative_path(path),
-            "command": " ".join(command),
+            "command": " ".join(portable_path(part) for part in command),
             "unique_reproduction_command": REPRODUCE_COMMAND,
             "workbook_sha256": sha256_file(path),
             "workbook_semantic_sha256": semantic_workbook_hash(path),
@@ -235,6 +250,10 @@ def build_manifest() -> None:
 
     manifest_path = RESULTS / "复现清单.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    # repro_manifest.py 按绝对路径记录输入，压成相对形式后再落盘。
+    for item in manifest.get("input_files", []):
+        if "path" in item:
+            item["path"] = portable_path(item["path"])
     code_files = (
         SOURCE / "water_quality_model.py",
         SOURCE / "water_quality_full.py",
@@ -271,6 +290,14 @@ def build_manifest() -> None:
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def sanitize_figure_audit(path: Path) -> None:
+    """figure_audit.py 记录的是绝对目录，改写为仓库相对形式。"""
+    report = json.loads(path.read_text(encoding="utf-8"))
+    if "directory" in report:
+        report["directory"] = portable_path(report["directory"])
+    path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
 def main() -> int:
     RESULTS.mkdir(parents=True, exist_ok=True)
     validate_input_protection()
@@ -290,6 +317,7 @@ def main() -> int:
         ],
         stdout_path=RESULTS / "figure_audit.json",
     )
+    sanitize_figure_audit(RESULTS / "figure_audit.json")
     validate_workbook(RESULTS / "建模结果.xlsx")
     recalculate_workbook(RESULTS / "建模结果.xlsx")
     validate_workbook(RESULTS / "建模结果.xlsx")
