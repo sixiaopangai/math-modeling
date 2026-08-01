@@ -23,7 +23,7 @@
 | `src/water_quality_figures.py` | 绘图 |
 | `src/reproduce.py` | 全量复现入口 |
 | `src/diagnose_shift.py` / `src/diagnose_figure.py` | 事后诊断，只读取冻结结果，不参与模型选择 |
-| `paper/完整论文-LaTeX/main.tex` | 论文源码（编译出 32 页 PDF） |
+| `paper/完整论文-LaTeX/main.tex` | 论文源码（定稿，编译出 27 页 PDF，13 图 11 表 5 篇文献） |
 | `results/建模结果.xlsx` | 题目要求的 Excel 答案表，17 个 sheet |
 | `results/*.csv` `*.json` | 中间结果与门禁记录 |
 | `figures/` | 论文插图（12 幅正式图 + 1 幅诊断图） |
@@ -50,5 +50,5 @@
 - **论文与 `results/` 必须逐一对应。** 改论文数值前先确认对应的 CSV/JSON；改代码后重跑 `src/reproduce.py` 并同步论文里引用的计数（如工作簿公式数）。
 - **可辨识性判据分两层**：`docs/题目分析报告.md` §5.2 的退化判据（众数占比 ≥90% 或取值恒定）与 §5.3 的 ±4 h 互相关容差，两者都通过才算可辨识。原水 pH 已按此判为不可辨识。
 - **图件门禁**：`figures/` 下每个 stem 必须 PNG + SVG 配对，PNG ≥300 dpi，SVG 必须保留可编辑文本节点（`svg.fonttype = "none"`）。
-- **BibTeX 与 `-outdir`**：部分发行版会在输出目录里找不到 `references.bib`，参考文献全空但编译仍返回 0。设 `BIBINPUTS` 指向项目目录，并以「日志 undefined 计数为 0、PDF 32 页」验收。
+- **BibTeX 与 `-outdir`**：部分发行版会在输出目录里找不到 `references.bib`，参考文献全空但编译仍返回 0。设 `BIBINPUTS` 指向项目目录，并以「日志 undefined 计数为 0、PDF 27 页、参考文献 5 条」验收。
 - **跨平台浮点**：Linux 与 Windows 之间有 1e-13 量级差异，`plot_*` 与 npz 的字节哈希会变，但论文引用的 CSV 逐字节一致。

@@ -76,7 +76,7 @@ PYTHONPATH=.vendor python src/reproduce.py
 Windows PowerShell 下等价写法：
 
 ```powershell
-$env:PYTHONPATH=".vendor"; python srceproduce.py
+$env:PYTHONPATH=".vendor"; python src/reproduce.py
 ```
 
 该命令依次执行：输入只读性校验 → 四问计算 → 绘图 → 图件审计（300 dpi、PNG/SVG 配对）→ 工作簿结构校验 → LibreOffice 重算 → 复算后二次校验 → 生成哈希清单。任一门禁不通过即抛出异常并停止。成功时输出 `{"status": "ok", ...}`。
@@ -104,7 +104,7 @@ PYTHONPATH=.vendor python src/diagnose_figure.py
 cd paper/完整论文-LaTeX && latexmk -norc -gg -xelatex -interaction=nonstopmode -halt-on-error -outdir=build main.tex
 ```
 
-> 若使用 `-outdir`，部分发行版的 BibTeX 会在输出目录中找不到 `references.bib`，导致参考文献全部为空而编译仍返回 0。此时先设置 `BIBINPUTS` 指向项目目录（Linux/macOS 用 `export BIBINPUTS="$PWD:"`，Windows 用 `$env:BIBINPUTS="$PWD;"`）。验收标准：编译日志中 `undefined` 计数为 0，PDF 为 32 页。
+> 若使用 `-outdir`，部分发行版的 BibTeX 会在输出目录中找不到 `references.bib`，导致参考文献全部为空而编译仍返回 0。此时先设置 `BIBINPUTS` 指向项目目录（Linux/macOS 用 `export BIBINPUTS="$PWD:"`，Windows 用 `$env:BIBINPUTS="$PWD;"`）。验收标准：编译日志中 `undefined` 计数为 0，PDF 为 27 页，参考文献 5 条。
 
 ## 脚本与产物对应关系
 

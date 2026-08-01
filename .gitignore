@@ -20,6 +20,9 @@ paper/完整论文-LaTeX/build_merge/
 
 # 论文修改前备份
 backups/
+
+# 分发给队友的论文改稿包：内容是 paper/ 下源码的副本，不重复入库
+论文-给队友.zip
 *.aux
 *.bbl
 *.blg
@@ -38,3 +41,6 @@ backups/
 Thumbs.db
 .idea/
 .vscode/
+
+# 待提交材料：内容为仓库中源码/结果/图件的副本，不重复入库
+待提交材料/
