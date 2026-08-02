@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "created_at": "2026-08-01T18:08:54.234826+00:00",
+  "created_at": "2026-08-02T05:13:28.297633+00:00",
   "passed": true,
   "main_tex": "main.tex",
   "project_root": "F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\paper\\完整论文-LaTeX",
-  "source_sha256": "0063f25dc3ba3664ecb7eaecf794d9443716ae41c0c5f79160f85438f2c6a138",
-  "compiled_source_sha256": "0063f25dc3ba3664ecb7eaecf794d9443716ae41c0c5f79160f85438f2c6a138",
-  "post_build_source_sha256": "0063f25dc3ba3664ecb7eaecf794d9443716ae41c0c5f79160f85438f2c6a138",
-  "pdf_sha256": "64578b1e2fbc5423ccdad7158f08b3503393e11f6f81ee91069f28814f6c4ccf",
+  "source_sha256": "d3ca6a1b141c3d8056b324f559b2f67dcd296e925a378086d0284e5f0e159601",
+  "compiled_source_sha256": "d3ca6a1b141c3d8056b324f559b2f67dcd296e925a378086d0284e5f0e159601",
+  "post_build_source_sha256": "d3ca6a1b141c3d8056b324f559b2f67dcd296e925a378086d0284e5f0e159601",
+  "pdf_sha256": "a4f3cf3c16b099d364ae1814c890d8702acca6804d766efb1bca072d4e40e2a3",
   "project_manifest_sha256": "8ff60060584986e5724d985ecc2ad6a0c0d4300f30e3d17b403f8034ef484af2",
   "engine": "xelatex",
   "tools": {
@@ -37,7 +37,7 @@
       ],
       "cwd": "F:\\workspace\\Java-Web\\01_Learning\\math-modeling\\paper\\完整论文-LaTeX",
       "returncode": 0,
-      "duration_seconds": 13.625
+      "duration_seconds": 14.984
     }
   ],
   "warnings": [],

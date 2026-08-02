@@ -23,7 +23,7 @@
 | `src/water_quality_figures.py` | 绘图 |
 | `src/reproduce.py` | 全量复现入口 |
 | `src/diagnose_shift.py` / `src/diagnose_figure.py` | 事后诊断，只读取冻结结果，不参与模型选择 |
-| `paper/完整论文-LaTeX/main.tex` | 论文源码（定稿，编译出 27 页 PDF，13 图 11 表 5 篇文献） |
+| `paper/完整论文-LaTeX/main.tex` | 论文源码（定稿，编译出 27 页 PDF，14 图 11 表 5 篇文献） |
 | `results/建模结果.xlsx` | 题目要求的 Excel 答案表，17 个 sheet |
 | `results/*.csv` `*.json` | 中间结果与门禁记录 |
 | `figures/` | 论文插图（12 幅正式图 + 1 幅诊断图） |

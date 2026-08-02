@@ -5,6 +5,8 @@
 \usepackage{array}
 \usepackage{geometry}
 \usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
 \usepackage[hidelinks]{hyperref}
 \geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
 \graphicspath{{figures/}}
@@ -47,9 +49,43 @@
 \subsection{问题重述}
 水厂提供了 2025 年 1 月至 2026 年 3 月的两小时运行记录，包括原水水位、流量、浊度、色度和 pH，滤后水浊度，清水井水位，出厂水 pH、浊度、余氯，混凝剂投加量及出厂流量等变量。任务包含四个相互衔接的部分：识别出厂水浊度的主要关联因素并补充 2026 年 2 月指定营运日的条件预测；估计原水与运行变量对滤后水的有效时滞和动态关系；描述清水池传播并给出 1--12 h 预测；最后把连续浊度轨迹转化为可解释的营运日水质等级。
 
-这四个问题并非彼此独立，而是构成了一个连续的分析过程。问题一通过分析影响出厂水浊度的主要因素，对缺失时段的出厂水浊度进行预测；问题二进一步描述原水指标和运行参数对滤后水浊度的动态影响关系；问题三结合清水池传播过程，实现由滤后水到出厂水的动态预测；问题四则在预测结果的基础上建立风险评价模型，将水质预测结果转换为营运风险等级。基于上述分析流程，我们采用统一的建模思路，即以数据质量控制为基础，以时间滚动验证为模型评价方法，结合物理传播模型与数据驱动模型完成预测，并将预测不确定性进一步传递至风险评价环节。
+这四个问题并非彼此独立，而是构成了一个连续的分析过程。问题一通过分析影响出厂水浊度的主要因素，对缺失时段的出厂水浊度进行预测；问题二进一步描述原水指标和运行参数对滤后水浊度的动态影响关系；问题三结合清水池传播过程，实现由滤后水到出厂水的动态预测；问题四则在预测结果的基础上建立风险评价模型，将水质预测结果转换为营运风险等级。基于上述分析流程，我们采用统一的建模思路，即以数据质量控制为基础，以时间滚动验证为模型评价方法，结合物理传播模型与数据驱动模型完成预测，并将预测不确定性进一步传递至风险评价环节。四问之间的输入输出关系与共用的验证设计汇总于图~\ref{fig:pipeline}。
 
-已有研究表明，水质预测普遍具有非线性、非平稳及缺失数据等特点\cite{chen2020}；对于自来水厂而言，原水水质变化与工艺运行参数共同决定了滤后水和出厂水的动态变化，因此模型不仅需要具有较好的拟合能力，还应关注不同时间阶段的预测稳定性\cite{kim2017}。基于这一认识，因此，我们在模型评价过程中采用独立时间段进行验证，以检验模型的泛化能力；对于变量之间的关系，仅讨论统计意义上的关联，不作因果解释。
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  font=\small,
+  box/.style={draw,rounded corners=2pt,align=center,inner sep=4pt},
+  data/.style={box,fill=black!5,text width=0.76\textwidth},
+  q/.style={box,text width=0.355\textwidth},
+  side/.style={box,dashed,fill=black!3,text width=0.355\textwidth},
+  flow/.style={-{Stealth[length=2mm]},thick},
+  lab/.style={font=\scriptsize,inner sep=1.5pt,fill=white}
+]
+\node[data] (raw) {数据质控：营运日时间轴重建为 5460 个两小时时点，保留原值、清洗值与无效标记};
+\node[q,below=9mm of raw.south west,anchor=north west] (q1)
+  {\textbf{问题一}\\Huber 岭主模型 + RFF 对照\\分块置换与方向一致性筛选\\指定营运日条件预测};
+\node[q,below=9mm of raw.south east,anchor=north east] (q2)
+  {\textbf{问题二}\\ARX-Ridge 时滞枚举\\有效时滞 $d_m$ 与动态响应\\目标为滤后水浊度 $F_t$};
+\node[q,below=9mm of q2.south east,anchor=north east] (q3)
+  {\textbf{问题三}\\指数 RTD 传播 + 对数残差修正\\移动块自助 500 条联合轨迹};
+\node[q,below=9mm of q3.south east,anchor=north east] (q4)
+  {\textbf{问题四}\\幅度 $A_d$、时长 $D_d$、负荷 $L_d$\\四级营运日风险等级};
+\node[side,below=9mm of q1.south west,anchor=north west] (val)
+  {\textbf{共用验证设计}\\四折滚动验证（训练端截至 2025 年 9--12 月）\\2026 年 3 月外部检验\\并列对照：前一营运日 / 持续性基线};
+
+\draw[flow] (raw.south -| q1.north) -- (q1.north);
+\draw[flow] (raw.south -| q2.north) -- (q2.north);
+\draw[flow] (q2.south) -- node[lab] {滤后水 $F_t$} (q3.north);
+\draw[flow] (q3.south) -- node[lab] {出厂水 $Y_t$ 联合轨迹} (q4.north);
+\draw[dashed,-{Stealth[length=2mm]}] (val.east) -- (q3.west);
+\draw[dashed,-{Stealth[length=2mm]}] (val.north) -- (q1.south);
+\end{tikzpicture}
+\caption{四问建模链路与共用验证设计}
+\label{fig:pipeline}
+\end{figure}
+
+已有研究表明，水质预测普遍具有非线性、非平稳及缺失数据等特点\cite{chen2020}；对于自来水厂而言，原水水质变化与工艺运行参数共同决定了滤后水和出厂水的动态变化，因此模型不仅需要具有较好的拟合能力，还应关注不同时间阶段的预测稳定性\cite{kim2017}。基于这一认识，我们在模型评价过程中采用独立时间段进行验证，以检验模型的泛化能力；对于变量之间的关系，仅讨论统计意义上的关联，不作因果解释。
 
 \subsection{基本假设与符号约定}
 为使四问共享同一时间和信息边界，作如下工作假设。第一，各月工作表中名称相同的字段具有一致的测量含义与单位，表头差异只作字段映射，不改变量纲。第二，模型在时刻 $t$ 作预测时只可使用 $t$ 及以前已经出现的信息；任何相关数据均只从对应训练窗估计。第三，本文设定的 1 NTU 基准与四级阈值是题目分析所需的统一评价尺度，不替代当地法规或水厂正式控制限。
@@ -119,7 +155,7 @@ d_i+1\text{日}+s_i, & s_i\in\{0100,0300,0500\}.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.88\textwidth]{raw_q1_target_missing.png}
+\includegraphics[width=0.76\textwidth]{raw_q1_target_missing.png}
 \caption{出厂水浊度观测与 2026 年 2 月缺失区间}
 \label{fig:q1-missing}
 \end{figure}
@@ -491,7 +527,7 @@ Spearman 秩相关系数，以检验其单调关联方向。需要说明的是�
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.53\textwidth]{process_q1_factor_screening.png}
+\includegraphics[width=0.46\textwidth]{process_q1_factor_screening.png}
 \caption{时间块置换贡献与稳健因素筛选}
 \label{fig:q1-factor}
 \end{figure}
@@ -531,7 +567,7 @@ Spearman 秩相关系数，以检验其单调关联方向。需要说明的是�
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.88\textwidth]{result_q1_february_predictions.png}
+\includegraphics[width=0.76\textwidth]{result_q1_february_predictions.png}
 \caption{三个指定营运日的出厂水浊度条件预测及 95\% 区间}
 \label{fig:q1-forecast}
 \end{figure}
@@ -569,7 +605,7 @@ Spearman 秩相关系数，以检验其单调关联方向。需要说明的是�
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.95\textwidth]{diag_distribution_shift.png}
+\includegraphics[width=0.86\textwidth]{diag_distribution_shift.png}
 \caption{训练窗与 2026 年 3 月外部窗的分布漂移及问题一误差结构}
 \label{fig:diag-shift}
 \end{figure}
@@ -614,7 +650,7 @@ RFF 岭 & 0.371614 & 0.318837 & $-2.994651$\\
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.88\textwidth]{raw_q2_input_output_series.png}
+\includegraphics[width=0.76\textwidth]{raw_q2_input_output_series.png}
 \caption{2026 年 1--3 月原水与滤后水浊度序列}
 \label{fig:q2-series}
 \end{figure}
@@ -658,7 +694,7 @@ RFF 岭 & 0.371614 & 0.318837 & $-2.994651$\\
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.53\textwidth]{process_q2_lag_search.png}
+\includegraphics[width=0.46\textwidth]{process_q2_lag_search.png}
 \caption{原水浊度与混凝剂时滞组合的最小滚动验证 RMSE}
 \label{fig:q2-lag}
 \end{figure}
@@ -692,7 +728,7 @@ RFF 岭 & 0.371614 & 0.318837 & $-2.994651$\\
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.88\textwidth]{result_q2_external_validation.png}
+\includegraphics[width=0.76\textwidth]{result_q2_external_validation.png}
 \caption{ARX-Ridge 对滤后水浊度的 2026 年 3 月外部检验}
 \label{fig:q2-validation}
 \end{figure}
@@ -707,7 +743,7 @@ RFF 岭 & 0.371614 & 0.318837 & $-2.994651$\\
 构造物理传播模型。指数 RTD 是单个理想连续搅拌槽的基本情形，并具有滤除上游高频波动的作用\cite{toson2019}。
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.88\textwidth]{raw_q3_filtered_treated_series.png}
+\includegraphics[width=0.76\textwidth]{raw_q3_filtered_treated_series.png}
 \caption{2026 年 1 月清水池前后浊度传播}
 \label{fig:q3-propagation}
 \end{figure}
@@ -794,7 +830,7 @@ $1-q^{12}\approx0.9502$。
 有效混合时间尺度，并非通过池体容积与流量直接测得的真实水力停留时间。
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.88\textwidth]{process_q3_rtd_selection.png}
+\includegraphics[width=0.76\textwidth]{process_q3_rtd_selection.png}
 \caption{指数 RTD 核及有效混合时间尺度选择}
 \label{fig:q3-rtd}
 \end{figure}
@@ -939,7 +975,7 @@ $95\%$ 预测区间。
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.53\textwidth]{result_q3_horizon_accuracy.png}
+\includegraphics[width=0.46\textwidth]{result_q3_horizon_accuracy.png}
 \caption{混合模型、持续性和纯物理基线的分时距 RMSE}
 \label{fig:q3-accuracy}
 \end{figure}
@@ -1045,14 +1081,14 @@ L_d=2\sum_re_{d,r}.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.88\textwidth]{raw_q4_daily_maximum.png}
+\includegraphics[width=0.76\textwidth]{raw_q4_daily_maximum.png}
 \caption{90 个营运日的最大出厂水浊度}
 \label{fig:q4-maximum}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.53\textwidth]{process_q4_risk_matrix.png}
+\includegraphics[width=0.46\textwidth]{process_q4_risk_matrix.png}
 \caption{最大超标幅度与最长连续超标时长构成的风险矩阵}
 \label{fig:q4-matrix}
 \end{figure}
@@ -1110,7 +1146,7 @@ HIGH & 1 & 1.11\\
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.88\textwidth]{result_q4_daily_grades.png}
+\includegraphics[width=0.76\textwidth]{result_q4_daily_grades.png}
 \caption{90 个营运日的众数等级与 95\% 等级范围}
 \label{fig:q4-grades}
 \end{figure}
